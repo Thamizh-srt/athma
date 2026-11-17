@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+/* Design tokens: use as bg-brand, text-navy, border-line, ... */
+@theme {
+  --font-sans: "Plus Jakarta Sans", system-ui, sans-serif;
+
+  --color-navy: #1b2d5c;
+  --color-navy-deep: #1f3a6e;
+  --color-brand: #e8591e;
+  --color-brand-light: #ff7a3a;
+  --color-ink: #1e2a4a;
+  --color-muted: #64708a;
+  --color-line: #dbe2ee;
+  --color-field: #f7f9fc;
+  --color-danger: #d92d20;
+
+  /* admin module */
+  --color-peach: #fffaf6;
+  --color-peach-line: #f1e4d9;
+}
+
+@layer base {
+  body {
+    @apply min-h-screen font-sans text-ink antialiased;
+    background:
+      radial-gradient(circle at 5% 5%, #dfe6f7 0, transparent 35%),
+      radial-gradient(circle at 100% 100%, #fbe9e0 0, transparent 30%),
+      #f6f8fc;
+  }
+}
