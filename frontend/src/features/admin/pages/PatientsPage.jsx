@@ -29,8 +29,14 @@ export default function PatientsPage() {
   const [page, setPage] = useState(1);
   const deferredQuery = useDeferredValue(query);
 
-  const patients = data ?? [];
+  const patientsData = data?.patients;
 
+  const patients = patientsData?.data ?? [];
+  const totalPatients = patientsData?.total ?? 0;
+  const currentPage = patientsData?.current_page ?? 1;
+  const lastPage = patientsData?.last_page ?? 1;
+  const perPage = patientsData?.per_page ?? 20;
+  
   const filtered = useMemo(() => {
     const q = deferredQuery.trim().toLowerCase();
     return patients.filter((p) => {

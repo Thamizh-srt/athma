@@ -48,7 +48,7 @@ export default function RegisterPage() {
     setServerError("");
     try {
       await registerUser(values);
-      navigate("/dashboard", { replace: true });
+      navigate("/login", { replace: true });
     } catch (err) {
       const message = handleApiError(err, setError);
       if (message) setServerError(message);

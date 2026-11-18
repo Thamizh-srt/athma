@@ -1,0 +1,175 @@
+{
+  "code": "BEIS10",
+  "title": "Brief Emotional Intelligence Scale (BEIS-10)",
+  "domain": "Emotional Intelligence",
+  "description": "Self-report scale to measure emotional intelligence.",
+  "instructions": "Select the response that best matches each of the following statements.",
+  "sort_order": 1,
+  "total_mode": "sum",
+  "question_type": "likert",
+  "option_sets": {
+    "agree5": [
+      {
+        "value": 1,
+        "label": "Strongly Disagree",
+        "label_ta": "முற்றிலும் உடன்படவில்லை"
+      },
+      {
+        "value": 2,
+        "label": "Disagree",
+        "label_ta": "உடன்படவில்லை"
+      },
+      {
+        "value": 3,
+        "label": "Neither Agree nor Disagree",
+        "label_ta": "உடன்படவும் இல்லை மறுக்கவும் இல்லை"
+      },
+      {
+        "value": 4,
+        "label": "Agree",
+        "label_ta": "உடன்படுகிறேன்"
+      },
+      {
+        "value": 5,
+        "label": "Strongly Agree",
+        "label_ta": "முழுமையாக உடன்படுகிறேன்"
+      }
+    ]
+  },
+  "sub_categories": [
+    {
+      "code": "AOE",
+      "name": "Appraisal of Own Emotions"
+    },
+    {
+      "code": "AOTE",
+      "name": "Appraisal of Others' Emotions"
+    },
+    {
+      "code": "ROE",
+      "name": "Regulation of Own Emotions"
+    },
+    {
+      "code": "ROTE",
+      "name": "Regulation of Others' Emotions"
+    },
+    {
+      "code": "UE",
+      "name": "Utilisation of Emotions"
+    }
+  ],
+  "subcategory_bands": [
+    {
+      "min": 2,
+      "max": 5,
+      "label": "Low",
+      "level": "low"
+    },
+    {
+      "min": 6,
+      "max": 6,
+      "label": "Normal",
+      "level": "normal"
+    },
+    {
+      "min": 7,
+      "max": 10,
+      "label": "High",
+      "level": "high"
+    }
+  ],
+  "bands": {
+    "total": [
+      {
+        "min": 10,
+        "max": 25,
+        "label": "Low",
+        "level": "low"
+      },
+      {
+        "min": 26,
+        "max": 34,
+        "label": "Normal",
+        "level": "normal"
+      },
+      {
+        "min": 35,
+        "max": 50,
+        "label": "High",
+        "level": "high"
+      }
+    ]
+  },
+  "questions": [
+    {
+      "number": 1,
+      "text": "I know why my emotions change",
+      "text_ta": "என் உணர்வுகள் ஏன் மாறுகின்றன என்பது எனக்குத் தெரியும்",
+      "sub_category": "AOE",
+      "options": "agree5"
+    },
+    {
+      "number": 2,
+      "text": "I easily recognise my emotions as I experience them",
+      "text_ta": "நான் உணரும்போதே என் உணர்வுகளை எளிதாக அடையாளம் காண்கிறேன்",
+      "sub_category": "AOE",
+      "options": "agree5"
+    },
+    {
+      "number": 3,
+      "text": "I can tell how people are feeling by listening to the tone of their voice",
+      "text_ta": "குரலின் தொனியைக் கேட்டு மற்றவர்கள் எப்படி உணர்கிறார்கள் என்பதை என்னால் சொல்ல முடியும்",
+      "sub_category": "AOTE",
+      "options": "agree5"
+    },
+    {
+      "number": 4,
+      "text": "By looking at their facial expressions, I recognise the emotions people are experiencing",
+      "text_ta": "முகபாவனைகளைப் பார்த்து மக்கள் அனுபவிக்கும் உணர்வுகளை நான் அடையாளம் காண்கிறேன்",
+      "sub_category": "AOTE",
+      "options": "agree5"
+    },
+    {
+      "number": 5,
+      "text": "I seek out activities that make me happy",
+      "text_ta": "எனக்கு மகிழ்ச்சி தரும் செயல்களை நான் தேடிச் செல்கிறேன்",
+      "sub_category": "ROE",
+      "options": "agree5"
+    },
+    {
+      "number": 6,
+      "text": "I have control over my emotions",
+      "text_ta": "என் உணர்வுகளை நான் கட்டுப்படுத்த முடியும்",
+      "sub_category": "ROE",
+      "options": "agree5"
+    },
+    {
+      "number": 7,
+      "text": "I arrange events others enjoy",
+      "text_ta": "மற்றவர்கள் விரும்பும் நிகழ்வுகளை நான் ஏற்பாடு செய்கிறேன்",
+      "sub_category": "ROTE",
+      "options": "agree5"
+    },
+    {
+      "number": 8,
+      "text": "I help other people feel better when they are down",
+      "text_ta": "மற்றவர்கள் மனச்சோர்வடைந்திருக்கும்போது அவர்களை சரி செய்ய நான் உதவுகிறேன்",
+      "sub_category": "ROTE",
+      "options": "agree5"
+    },
+    {
+      "number": 9,
+      "text": "When I am in a positive mood, I am able to come up with new ideas",
+      "text_ta": "நான் நல்ல மனநிலையில் இருக்கும்போது புதிய யோசனைகளை உருவாக்க முடிகிறது",
+      "sub_category": "UE",
+      "options": "agree5"
+    },
+    {
+      "number": 10,
+      "text": "I use good moods to help myself keep trying in the face of obstacles",
+      "text_ta": "தடைகளை எதிர்கொள்ளும்போது தொடர்ந்து முயற்சி செய்ய நல்ல மனநிலையைப் பயன்படுத்துகிறேன்",
+      "sub_category": "UE",
+      "options": "agree5"
+    }
+  ]
+}

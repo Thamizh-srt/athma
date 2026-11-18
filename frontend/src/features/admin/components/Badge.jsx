@@ -17,7 +17,7 @@ export default function Badge({ tone = "orange", children }) {
 
 export function Tag({ gray, children }) {
   return gray ? (
-    <span className="inline-block rounded-lg border border-stone-200 bg-stone-100 px-2.5 py-0.5 text-xs font-medium text-stone-500">{children}</span>
+    <span className="inline-block rounded-lg border border-stone-200 bg-stone-100 px-2.5 py-0.5 text-xs font-medium text-stone-500 mr-2">{children}</span>
   ) : (
     <span className="inline-block rounded-lg border border-orange-200 bg-orange-50 px-3 py-1 text-[13px] font-medium text-orange-700">{children}</span>
   );

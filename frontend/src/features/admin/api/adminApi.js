@@ -13,7 +13,7 @@ export const adminApi = {
   logout: route("logout", () => client.post("/admin/auth/logout")),
   getOverview: route("getOverview", () => get("/admin/overview")),
   getPatients: route("getPatients", () => get("/admin/patients")),
-  getQuizzes: route("getQuizzes", () => get("/admin/quizzes")),
+  getQuizzes: route("getQuizzes", () => get("/admin/questions")),
   getQuiz: route("getQuiz", (id) => get(`/admin/quizzes/${id}`)),
   getAttemptReport: route("getAttemptReport", (id) => get(`/admin/attempts/${id}/report`)),
 };

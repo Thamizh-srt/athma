@@ -1,0 +1,410 @@
+{
+  "code": "ISAA",
+  "title": "Indian Scale for Assessment of Autism",
+  "domain": "Autism",
+  "description": "Assessment by NIMH, Secunderabad (Ministry of Social Justice & Empowerment, Govt. of India).",
+  "instructions": "Below are given 40 statements which are divided under six domains. Select the appropriate rating for each item of the scale by observing the child and by interviewing the parents, in order to assess autism.",
+  "sort_order": 4,
+  "total_mode": "sum",
+  "question_type": "likert",
+  "option_sets": {
+    "isaa5": [
+      {
+        "value": 1,
+        "label": "Rarely (up to 20%)"
+      },
+      {
+        "value": 2,
+        "label": "Sometimes (21-40%)"
+      },
+      {
+        "value": 3,
+        "label": "Frequently (41-60%)"
+      },
+      {
+        "value": 4,
+        "label": "Mostly (61-80%)"
+      },
+      {
+        "value": 5,
+        "label": "Always (81-100%)"
+      }
+    ]
+  },
+  "sub_categories": [
+    {
+      "code": "SRR",
+      "name": "Social Relationship and Reciprocity"
+    },
+    {
+      "code": "ER",
+      "name": "Emotional Responsiveness"
+    },
+    {
+      "code": "SLC",
+      "name": "Speech-Language and Communication"
+    },
+    {
+      "code": "BP",
+      "name": "Behavioural Patterns"
+    },
+    {
+      "code": "SA",
+      "name": "Sensory Aspects"
+    },
+    {
+      "code": "CC",
+      "name": "Cognitive Component"
+    }
+  ],
+  "bands": {
+    "total": [
+      {
+        "min": 40,
+        "max": 69,
+        "label": "No autism",
+        "level": "normal"
+      },
+      {
+        "min": 70,
+        "max": 106,
+        "label": "Mild autism",
+        "level": "low"
+      },
+      {
+        "min": 107,
+        "max": 153,
+        "label": "Moderate autism",
+        "level": "moderate"
+      },
+      {
+        "min": 154,
+        "max": 200,
+        "label": "Severe autism",
+        "level": "high"
+      }
+    ]
+  },
+  "questions": [
+    {
+      "number": 1,
+      "text": "Has poor eye contact",
+      "text_ta": "மோசமான கண் தொடர்பு கொண்டிருக்கிறார்",
+      "sub_category": "SRR",
+      "options": "isaa5",
+      "scale_type":"Scale: A"
+    },
+    {
+      "number": 2,
+      "text": "Lacks social smile",
+      "text_ta": "சமூக புன்னகை இல்லை",
+      "sub_category": "SRR",
+      "options": "isaa5",
+      "scale_type":"Scale: A"
+    },
+    {
+      "number": 3,
+      "text": "Remains aloof",
+      "text_ta": "தனிமையாக இருக்கிறார்",
+      "sub_category": "SRR",
+      "options": "isaa5",
+      "scale_type":"Scale: A"
+    },
+    {
+      "number": 4,
+      "text": "Does not reach out to others",
+      "text_ta": "மற்றவர்களை அணுகவில்லை",
+      "sub_category": "SRR",
+      "options": "isaa5",
+      "scale_type":"Scale: A"
+    },
+    {
+      "number": 5,
+      "text": "Unable to relate to people",
+      "text_ta": "மக்களுடன் தொடர்பு கொள்ள முடியவில்லை",
+      "sub_category": "SRR",
+      "options": "isaa5",
+      "scale_type":"Scale: A"
+    },
+    {
+      "number": 6,
+      "text": "Unable to respond to social/environmental cues",
+      "text_ta": "சமூக/சுற்றுச்சூழல் குறிப்புகளுக்கு பதிலளிக்க முடியவில்லை",
+      "sub_category": "SRR",
+      "options": "isaa5",
+      "scale_type":"Scale: A"
+    },
+    {
+      "number": 7,
+      "text": "Engages in solitary and repetitive play activities",
+      "text_ta": "தனிமையான மற்றும் மீண்டும் மீண்டும் விளையாட்டு செயல்களில் ஈடுபடுகிறார்",
+      "sub_category": "SRR",
+      "options": "isaa5",
+      "scale_type":"Scale: A"
+    },
+    {
+      "number": 8,
+      "text": "Unable to take turns in social interaction",
+      "text_ta": "சமூக தொடர்பில் மாறி மாறி முறை மாறி செய்ய முடியவில்லை",
+      "sub_category": "SRR",
+      "options": "isaa5",
+      "scale_type":"Scale: A"
+    },
+    {
+      "number": 9,
+      "text": "Does not maintain peer relationships",
+      "text_ta": "சக நண்பர்களுடன் உறவுகளை பராமரிக்கவில்லை",
+      "sub_category": "SRR",
+      "options": "isaa5",
+      "scale_type":"Scale: A"
+    },
+    {
+      "number": 10,
+      "text": "Shows inappropriate emotional response",
+      "text_ta": "பொருத்தமற்ற உணர்வுபூர்வ பதிலைக் காட்டுகிறார்",
+      "sub_category": "ER",
+      "options": "isaa5",
+      "scale_type":"Scale: B"     
+    },
+    {
+      "number": 11,
+      "text": "Shows exaggerated emotions",
+      "text_ta": "மிகைப்படுத்தப்பட்ட உணர்வுகளை காட்டுகிறார்",
+      "sub_category": "ER",
+      "options": "isaa5",
+      "scale_type":"Scale: B"
+    },
+    {
+      "number": 12,
+      "text": "Engages in self-stimulating emotions",
+      "text_ta": "சுய-தூண்டுதல் உணர்வுகளில் ஈடுபடுகிறார்",
+      "sub_category": "ER",
+      "options": "isaa5",
+      "scale_type":"Scale: B"
+    },
+    {
+      "number": 13,
+      "text": "Lacks fear of danger",
+      "text_ta": "ஆபத்து பற்றிய பயம் இல்லை",
+      "sub_category": "ER",
+      "options": "isaa5",
+      "scale_type":"Scale: B"
+    },
+    {
+      "number": 14,
+      "text": "Excited or agitated for no apparent reason",
+      "text_ta": "தெரிவான காரணமின்றி உற்சாகமாகவோ அல்லது பதட்டமாகவோ இருக்கிறார்",
+      "sub_category": "ER",
+      "options": "isaa5",
+      "scale_type":"Scale: B"
+    },
+    {
+      "number": 15,
+      "text": "Acquired speech and lost it",
+      "text_ta": "பெற்ற பேச்சை பின்னர் இழந்தார்",
+      "sub_category": "SLC",
+      "options": "isaa5",
+      "scale_type":"Scale: C"
+    },
+    {
+      "number": 16,
+      "text": "Has difficulty in using non-verbal language or gestures to communicate",
+      "text_ta": "தொடர்பு கொள்ள வாய்மொழியல்லாத மொழி அல்லது சைகைகளை பயன்படுத்த சிரமப்படுகிறார்",
+      "sub_category": "SLC",
+      "options": "isaa5",
+      "scale_type":"Scale: C"
+    },
+    {
+      "number": 17,
+      "text": "Engages in stereotyped and repetitive use of language",
+      "text_ta": "மொழியின் மீசெயல் மற்றும் மீண்டும் மீண்டும் பயன்படுத்துகிறார்",
+      "sub_category": "SLC",
+      "options": "isaa5",
+      "scale_type":"Scale: C"
+    },
+    {
+      "number": 18,
+      "text": "Engages in echolalic speech",
+      "text_ta": "எதிரொலி பேச்சில் ஈடுபடுகிறார்",
+      "sub_category": "SLC",
+      "options": "isaa5",
+      "scale_type":"Scale: C"
+    },
+    {
+      "number": 19,
+      "text": "Produces infantile squeals/unusual noises",
+      "text_ta": "குழந்தைத்தனமான சத்தங்கள்/அசாதாரண ஒலிகளை உருவாக்குகிறார்",
+      "sub_category": "SLC",
+      "options": "isaa5",
+      "scale_type":"Scale: C"
+    },
+    {
+      "number": 20,
+      "text": "Unable to initiate or sustain conversation with others",
+      "text_ta": "மற்றவர்களுடன் உரையாடலை தொடங்கவோ தொடரவோ முடியவில்லை",
+      "sub_category": "SLC",
+      "options": "isaa5",
+      "scale_type":"Scale: C"
+    },
+    {
+      "number": 21,
+      "text": "Uses jargon or meaningless words",
+      "text_ta": "வாசகங்கள் அல்லது அர்த்தமற்ற சொற்களைப் பயன்படுத்துகிறார்",
+      "sub_category": "SLC",
+      "options": "isaa5",
+      "scale_type":"Scale: C"
+    },
+    {
+      "number": 22,
+      "text": "Uses pronoun reversals",
+      "text_ta": "பிரதிபெயர் தலைகீழ் பயன்படுத்துகிறார்",
+      "sub_category": "SLC",
+      "options": "isaa5",
+      "scale_type":"Scale: C"
+    },
+    {
+      "number": 23,
+      "text": "Unable to grasp pragmatics of communication (real meaning of words)",
+      "text_ta": "தொடர்பின் நடைமுறை உண்மையான சொற்களின் உண்மையான அர்த்தம் புரிந்து கொள்ள முடியவில்லை",
+      "sub_category": "SLC",
+      "options": "isaa5",
+      "scale_type":"Scale: C"
+    },
+    {
+      "number": 24,
+      "text": "Engages in stereotyped and repetitive motor mannerisms",
+      "text_ta": "மீள்செயல் மற்றும் மீண்டும் மீண்டும் இயக்க துரிதமான நடத்தைகளை செய்கிறார்",
+      "sub_category": "BP",
+      "options": "isaa5",
+      "scale_type":"Scale: D"
+    },
+    {
+      "number": 25,
+      "text": "Shows attachment to inanimate objects",
+      "text_ta": "உயிரற்ற பொருட்களுடன் பற்று காட்டுகிறார்",
+      "sub_category": "BP",
+      "options": "isaa5",
+      "scale_type":"Scale: D"
+    },
+    {
+      "number": 26,
+      "text": "Shows hyperactivity/restlessness",
+      "text_ta": "அதிக இயக்கத்தன்மை/அமைதியற்ற தன்மை காட்டுகிறார்",
+      "sub_category": "BP",
+      "options": "isaa5",
+      "scale_type":"Scale: D"
+    },
+    {
+      "number": 27,
+      "text": "Exhibits aggressive behavior",
+      "text_ta": "ஆக்கிரமிப்பு நடத்தை வெளிப்படுத்துகிறார்",
+      "sub_category": "BP",
+      "options": "isaa5",
+      "scale_type":"Scale: D"
+    },
+    {
+      "number": 28,
+      "text": "Throws temper tantrums",
+      "text_ta": "கோப வெடிப்பினை காட்டுகிறார்",
+      "sub_category": "BP",
+      "options": "isaa5",
+      "scale_type":"Scale: D"
+    },
+    {
+      "number": 29,
+      "text": "Engages in self-injurious behavior",
+      "text_ta": "சுய-தடும்பம் நடத்தை நடக்கிறார்",
+      "sub_category": "BP",
+      "options": "isaa5",
+      "scale_type":"Scale: D"
+    },
+    {
+      "number": 30,
+      "text": "Insists on sameness; resists change",
+      "text_ta": "ஒரே மாதிரியாக இருக்க வலியுறுத்தி மாற்றத்தை எதிர்க்கிறார்",
+      "sub_category": "BP",
+      "options": "isaa5",
+      "scale_type":"Scale: D"
+    },
+    {
+      "number": 31,
+      "text": "Unusually sensitive to sensory stimuli",
+      "text_ta": "புலன் தூண்டுதல்களுக்கு அசாதாரண உணர்திறன் உள்ளவர்",
+      "sub_category": "SA",
+      "options": "isaa5",
+      "scale_type":"Scale: E"
+    },
+    {
+      "number": 32,
+      "text": "Stares into space for long periods of time",
+      "text_ta": "நீண்ட நேரம் வெற்றிடத்தைக் பார்ப்பார்",
+      "sub_category": "SA",
+      "options": "isaa5",
+      "scale_type":"Scale: E"
+    },
+    {
+      "number": 33,
+      "text": "Has difficulty in tracking objects",
+      "text_ta": "பொருட்களை கண்காணிப்பதில் சிரமம்",
+      "sub_category": "SA",
+      "options": "isaa5",
+      "scale_type":"Scale: E"
+    },
+    {
+      "number": 34,
+      "text": "Has unusual vision",
+      "text_ta": "அசாதாரண பார்வை கொண்டிருக்கிறார்",
+      "sub_category": "SA",
+      "options": "isaa5",
+      "scale_type":"Scale: E"
+    },
+    {
+      "number": 35,
+      "text": "Insensitive to pain",
+      "text_ta": "வலிக்கு உணர்வற்ற தன்மை",
+      "sub_category": "SA",
+      "options": "isaa5",
+      "scale_type":"Scale: E"
+    },
+    {
+      "number": 36,
+      "text": "Responds to objects/people unusually by smelling, touching or tasting",
+      "text_ta": "பொருட்கள்/மக்களுக்கு வாசனை, தொடுகுதல் அல்லது ருசி மூலம் அசாதாரணமாக பதிலளிக்கிறார்",
+      "sub_category": "SA",
+      "options": "isaa5",
+      "scale_type":"Scale: E"
+    },
+    {
+      "number": 37,
+      "text": "Inconsistent attention and concentration",
+      "text_ta": "சீரற்ற கவனம் மற்றும் செறிவு",
+      "sub_category": "CC",
+      "options": "isaa5",
+      "scale_type":"Scale: F"
+    },
+    {
+      "number": 38,
+      "text": "Shows delay in responding",
+      "text_ta": "பதிலளிப்பதில் தாமதம் காட்டுகிறார்",
+      "sub_category": "CC",
+      "options": "isaa5",
+      "scale_type":"Scale: F"
+    },
+    {
+      "number": 39,
+      "text": "Has unusual memory of some kind",
+      "text_ta": "ஏதோ ஒரு வகையில் அசாதாரண நினைவாற்றல்",
+      "sub_category": "CC",
+      "options": "isaa5",
+      "scale_type":"Scale: F"
+    },
+    {
+      "number": 40,
+      "text": "Has 'savant' ability",
+      "text_ta": "'சாவந்த்' திறன் கொண்டிருக்கிறார்",
+      "sub_category": "CC",
+      "options": "isaa5",
+      "scale_type":"Scale: F"
+    }
+  ]
+}

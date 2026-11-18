@@ -35,4 +35,12 @@ class AdminDashboardController extends Controller
             'patients' => $patient
         ]);
     }
+
+    public function quizzes(){
+        $patient = Patient::select('full_name','phone','location','created_at')->paginate(env('PAGINATION_LIMIT', 20));
+
+        return response()->json([
+            'patients' => $patient
+        ]);
+    }
 }

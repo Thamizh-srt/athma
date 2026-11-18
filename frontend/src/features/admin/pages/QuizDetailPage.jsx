@@ -138,6 +138,7 @@ export default function QuizDetailPage() {
                   <div>
                     <p className="mb-2.5 mt-0.5 text-[14.5px] font-medium">{q.text[lang] ?? q.text.en}</p>
                     <Tag gray>{TYPE_LABEL[q.type] ?? q.type}</Tag>
+                    {q.scale_type && <Tag gray>{TYPE_LABEL[q.scale_type] ?? q.scale_type}</Tag>}
                     <div className="mt-3 flex flex-wrap gap-2">
                       {q.options.map((o) => (
                         <span key={o.value} className="inline-flex items-center gap-2 rounded-[10px] border border-peach-line py-1.5 pl-2 pr-3 text-[13px]">
