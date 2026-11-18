@@ -8,7 +8,7 @@ export default function DonutChart({ segments, total, label }) {
       <svg viewBox="0 0 120 120" role="img" aria-label={`${label}: ${total}`} className="block w-full">
         <g transform="rotate(-90 60 60)" fill="none" strokeWidth="18">
           {segments.map((s) => {
-            const len = (s.value / total) * C;
+            const len = total ? (s.value / total) * C : 0;
             const el = <circle key={s.key} cx="60" cy="60" r={R} stroke={s.color} strokeDasharray={`${len} ${C - len}`} strokeDashoffset={-offset} />;
             offset += len;
             return el;

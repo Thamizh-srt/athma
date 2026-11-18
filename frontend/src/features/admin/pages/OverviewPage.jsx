@@ -17,7 +17,6 @@ const Hl = ({ children }) => <b className="font-medium text-orange-700">{childre
 
 export default function OverviewPage() {
   const { data, loading, error } = useAsync(adminApi.getOverview, []);
-  console.log(data);
   if (loading || error) return <>{HEADER}<PageState loading={loading} error={error} /></>;
 
   const { stats, by_day, risk } = data;
@@ -54,7 +53,7 @@ export default function OverviewPage() {
                   <i className="size-2.5 rounded-full" style={{ background: s.color }} />
                   <span className="flex-1">{s.label}</span>
                   <b className="text-neutral-900">{number(s.value)}</b>
-                  <em className="w-11 text-right text-sm not-italic">{Math.round((s.value / total) * 100)}%</em>
+                  <em className="w-11 text-right text-sm not-italic">{total ? Math.round((s.value / total) * 100) : 0}%</em>
                 </li>
               ))}
             </ul>
@@ -62,12 +61,12 @@ export default function OverviewPage() {
         </Card>
       </div>
 
-      <Card>
+      {/* <Card>
         <CardHeader
           title="Latest activity"
           right={<Link to="/admin/activity" className="rounded-[10px] border border-peach-line px-3.5 py-2 text-sm text-orange-700 hover:bg-orange-50">View all</Link>}
         />
-        {/* <ul className="divide-y divide-orange-100/60">
+        <ul className="divide-y divide-orange-100/60">
           {activity.map((a) => (
             <li key={a.id} className="flex items-center gap-3.5 px-7 py-4">
               <Avatar name={a.name} />
@@ -78,8 +77,8 @@ export default function OverviewPage() {
               <Badge tone={a.risk}>{RISK[a.risk].label}</Badge>
             </li>
           ))}
-        </ul> */}
-      </Card>
+        </ul>
+      </Card> */}
     </>
   );
 }
