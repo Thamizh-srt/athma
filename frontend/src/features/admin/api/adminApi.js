@@ -1,3 +1,4 @@
+import client from "@/api/client";
 
 const get = (url, params) =>
   client.get(url, { params }).then((r) => r.data);
@@ -19,3 +20,4 @@ export const adminApi = {
   getQuiz: (id) => get(`/admin/quizzes/${id}`),
   getAttemptReport: (id) => get(`/admin/attempts/${id}/report`),
 };
+

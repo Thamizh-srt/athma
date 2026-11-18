@@ -9,6 +9,7 @@ const AdminLoginPage = lazy(() => import("./auth/AdminLoginPage"));
 const OverviewPage = lazy(() => import("./pages/OverviewPage"));
 const PatientsPage = lazy(() => import("./pages/PatientsPage"));
 const PatientDetailPage = lazy(() => import("./pages/PatientDetailPage"));
+const PatientReportPage = lazy(() => import("./pages/PatientReportPage"));
 const QuizzesPage = lazy(() => import("./pages/QuizzesPage"));
 const QuizDetailPage = lazy(() => import("./pages/QuizDetailPage"));
 const ComingSoonPage = lazy(() => import("./pages/ComingSoonPage"));
@@ -21,6 +22,7 @@ export default function AdminApp() {
         <Routes>
           <Route path="login" element={<AdminLoginPage />} />
           <Route element={<AdminGuard />}>
+            <Route path="patients/:patientId/report" element={<PatientReportPage />} />
             <Route element={<AdminLayout />}>
               <Route index element={<OverviewPage />} />
               <Route path="patients" element={<PatientsPage />} />

@@ -57,7 +57,7 @@ function PatientDetail({ patientId }) {
         </div>
 
         <div className="pd-area-list">
-          <AssessmentList items={items} attended={list.data?.quizzes_attended ?? 0} selectedId={selectedId} onSelect={setPicked} />
+          <AssessmentList patientId={patientId} items={items} attended={list.data?.quizzes_attended ?? 0} selectedId={selectedId} onSelect={setPicked} />
         </div>
       </div>
     </>

@@ -1,0 +1,105 @@
+.assessment-report-page {
+  box-sizing: border-box;
+  max-width: 1000px;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 32px;
+  background: #fff;
+}
+
+.report-heading {
+  margin-bottom: 24px;
+  border-bottom: 2px solid #ea580c;
+  padding-bottom: 14px;
+}
+
+.report-heading h1 {
+  margin: 0;
+  font-size: 26px;
+}
+
+.report-heading p,
+.report-assessment > header p {
+  margin: 5px 0 0;
+  color: #78716c;
+  font-size: 12px;
+}
+
+.report-patient > h2,
+.report-assessments > h2 {
+  margin: 0 0 12px;
+  font-size: 17px;
+}
+
+.report-patient .pd-profile {
+  margin-top: 12px;
+}
+
+.report-assessments {
+  margin-top: 28px;
+}
+
+.report-assessment {
+  margin-top: 20px;
+}
+
+.report-assessment > header {
+  border-bottom: 1px solid #ea580c;
+  padding-bottom: 8px;
+}
+
+.report-assessment > header h3 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.report-assessment .pd-answers {
+  break-inside: auto;
+}
+
+.report-empty {
+  border: 1px solid #f1e4d9;
+  border-radius: 12px;
+  padding: 18px;
+  color: #78716c;
+}
+
+@media print {
+  @page {
+    size: A4;
+    margin: 14mm;
+  }
+
+  html,
+  body,
+  #root {
+    min-height: 0;
+    background: #fff !important;
+  }
+
+  .assessment-report-page {
+    width: auto;
+    max-width: none;
+    min-height: 0;
+    margin: 0;
+    padding: 0;
+  }
+
+  .assessment-report-page .pd-actions,
+  .assessment-report-page .pd-toolbar {
+    display: none !important;
+  }
+
+  .report-patient {
+    break-inside: avoid-page;
+  }
+
+  .assessment-report-page .pd-answers {
+    break-inside: auto;
+    overflow: visible !important;
+  }
+
+  .a-card {
+    box-shadow: none;
+  }
+}

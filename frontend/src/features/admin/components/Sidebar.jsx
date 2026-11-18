@@ -8,8 +8,8 @@ const NAV = [
   { to: "/admin", label: "Overview", icon: GridIcon, end: true },
   { to: "/admin/patients", label: "Patients", icon: UsersIcon },
   { to: "/admin/questions", label: "Questions & Answers", icon: HelpIcon },
-  { to: "/admin/reports", label: "Reports", icon: FileIcon },
-  { to: "/admin/activity", label: "Activity", icon: PulseIcon },
+  // { to: "/admin/reports", label: "Reports", icon: FileIcon },
+  // { to: "/admin/activity", label: "Activity", icon: PulseIcon },
 ];
 
 const ACTIVE = "bg-orange-100 font-bold text-orange-700 before:absolute before:inset-y-3 before:-left-5 before:w-1 before:rounded-r before:bg-orange-600";

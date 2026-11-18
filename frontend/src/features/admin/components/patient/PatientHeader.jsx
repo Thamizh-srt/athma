@@ -21,10 +21,10 @@ export default function PatientHeader({ patient: p }) {
           </div>
         </div>
       </div>
-      <div className="pd-actions">
+      {/* <div className="pd-actions">
         <a className="btn-orange" href={`tel:${p.phone}`}><PhoneIcon size={15} /> Call</a>
         <a className="btn-ghost" href={`mailto:${p.email}`}><MailIcon size={15} /> Email</a>
-      </div>
+      </div> */}
     </section>
   );
 }

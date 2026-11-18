@@ -1,4 +1,5 @@
 import { AlertIcon, ClipboardIcon, FileIcon } from "@/components/ui/icons";
+import { Link } from "react-router-dom";
 import ProgressRing from "./ProgressRing";
 
 function statusText(item) {
@@ -8,7 +9,7 @@ function statusText(item) {
 }
 
 /** Right-hand column: every assessment with how far the patient got. Click one to load it. */
-export default function AssessmentList({ items, attended, selectedId, onSelect }) {
+export default function AssessmentList({ patientId, items, attended, selectedId, onSelect }) {
   return (
     <aside className="a-card pd-assess">
       <div className="pd-assess-head">
@@ -16,9 +17,9 @@ export default function AssessmentList({ items, attended, selectedId, onSelect }
           <h3><ClipboardIcon size={16} /> Assessments</h3>
           <small>{attended} {attended === 1 ? "quiz" : "quizzes"} attended</small>
         </div>
-        <button type="button" className="btn-orange pd-no-print" onClick={() => window.print()}>
+        <Link to={`/admin/patients/${patientId}/report`} target="_blank" rel="noreferrer" className="btn-orange pd-no-print">
           <FileIcon size={14} /> Report
-        </button>
+        </Link>
       </div>
 
       <ul className="al-list">
