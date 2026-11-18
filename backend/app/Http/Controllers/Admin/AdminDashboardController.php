@@ -119,7 +119,12 @@ class AdminDashboardController extends Controller
     }
 
     public function patient(){
-        $patient = Patient::select('id','full_name','phone','location','created_at')->paginate(env('PAGINATION_LIMIT', 20));
+        $patient = Patient::select('id','full_name','phone','location','created_at','consent')
+        ->paginate(env('PAGINATION_LIMIT', 20))
+        ->through(function ($patient) {
+            $patient->declaration_signed = (bool) $patient->consent;
+            return $patient;
+        });
 
         return response()->json([
             'patients' => $patient

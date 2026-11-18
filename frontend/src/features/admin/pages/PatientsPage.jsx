@@ -97,7 +97,7 @@ export default function PatientsPage() {
             </thead>
             <tbody>
               {pagePatients.map((p) => (
-                <tr key={p.id} className="row-link" onClick={() => navigate(`/admin/patients/${p.id}`)}>
+                <tr key={p.id} className="row-link cursor-pointer" onClick={() => navigate(`/admin/patients/${p.id}`)}>
                   <td className={TD}>
                     <div className="flex items-center gap-3.5">
                       <Avatar name={p.full_name} large />
