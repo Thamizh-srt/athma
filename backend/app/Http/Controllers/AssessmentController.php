@@ -10,7 +10,7 @@ use App\Support\AssessmentPresenter as P;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 
-/** Patient-facing: list assessments, open one, save answers, submit and view results. */
+/** Patient-facing: list assessments, open one, save answers, submit. Scores are never returned. */
 class AssessmentController extends Controller
 {
     public function __construct(private readonly AssessmentService $service)
@@ -34,7 +34,7 @@ class AssessmentController extends Controller
                     'domain' => $c->domain,
                     'description' => $c->description,
                     'questions_count' => $c->questions_count,
-                    'status' => $a?->status ?? 'pending',
+                    'status' => $a?->status ?? 'not_started',     // not_started | in_progress | completed
                     'answered_count' => $a?->answers_count ?? 0,
                     'completed_at' => $a?->completed_at,
                 ];
@@ -49,12 +49,8 @@ class AssessmentController extends Controller
 
         $category->load(['subCategories', 'questions.options']);
         $attempt = PatientAssessment::where('patient_id', $request->user()->id)
-            ->where('category_id', $category->id)
-            ->with(['answers', 'results.subCategory'])
-            ->first();
+            ->where('category_id', $category->id)->with('answers')->first();
         $selected = $attempt ? $attempt->answers->pluck('option_id', 'question_id') : collect();
-        $results = $attempt?->results ?? collect();
-        $totalResult = $results->firstWhere('sub_category_id', null);
 
         return response()->json([
             'id' => $category->id,
@@ -65,30 +61,8 @@ class AssessmentController extends Controller
             'description' => $category->description,
             'instructions' => P::pair($category->instructions, $category->instructions_ta),
             'status' => $attempt?->status ?? 'not_started',
-            'attempt_id' => $attempt?->id,
             'questions_count' => $category->questions->count(),
             'answered_count' => $selected->count(),
-            'answers' => $attempt?->answers->map(fn ($answer) => [
-                'question_id' => $answer->question_id,
-                'option_id' => $answer->option_id,
-            ])->values() ?? collect(),
-            'results' => $attempt?->isCompleted() ? [
-                'total_score' => $totalResult?->score,
-                'dimensions' => $results
-                    ->whereNotNull('sub_category_id')
-                    ->map(fn ($result) => [
-                        'code' => $result->subCategory?->code ?? (string) $result->sub_category_id,
-                        'title' => P::pair(
-                            $result->subCategory?->name ?? 'Assessment result',
-                            $result->subCategory?->name_ta
-                        ),
-                        'score' => $result->score,
-                        'interpretation' => [
-                            'label' => $result->label,
-                            'description' => $result->interpretation,
-                        ],
-                    ])->values(),
-            ] : null,
             'sub_categories' => $category->subCategories->map(fn ($s) => [
                 'id' => $s->id,
                 'code' => $s->code,
@@ -97,7 +71,6 @@ class AssessmentController extends Controller
             ])->values(),
             // flat, in form order; each question carries its sub_category_id (null for scales with none)
             'questions' => $category->questions->map(fn ($q) => P::question($q) + [
-                'required' => true,
                 'selected_option_id' => $selected->get($q->id),
             ])->values(),
         ]);

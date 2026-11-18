@@ -29,7 +29,7 @@ class AdminDashboardController extends Controller
     }
 
     public function patient(){
-        $patient = Patient::select('full_name','phone','location','created_at')->paginate(env('PAGINATION_LIMIT', 20));
+        $patient = Patient::select('id','full_name','phone','location','created_at')->paginate(env('PAGINATION_LIMIT', 20));
 
         return response()->json([
             'patients' => $patient
@@ -37,7 +37,7 @@ class AdminDashboardController extends Controller
     }
 
     public function quizzes(){
-        $patient = Patient::select('full_name','phone','location','created_at')->paginate(env('PAGINATION_LIMIT', 20));
+        $patient = Patient::select('id','full_name','phone','location','created_at')->paginate(env('PAGINATION_LIMIT', 20));
 
         return response()->json([
             'patients' => $patient

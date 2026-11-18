@@ -10,6 +10,8 @@ use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\ValidationException;
+use App\Events\PatientRegistered;
+use Throwable;
 
 class PatientAuthController extends Controller
 {
@@ -19,6 +21,12 @@ class PatientAuthController extends Controller
             ...$request->validated(),
             'consented_at' => now(),
         ]);
+
+        try {
+            PatientRegistered::dispatch($patient);
+        } catch (Throwable $e) {
+            report($e);
+        }
 
         return response()->json([
             'token' => $patient->createToken('patient')->plainTextToken,

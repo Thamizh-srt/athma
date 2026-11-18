@@ -7,7 +7,6 @@ use App\Models\AssessmentCategory;
 use App\Support\AssessmentPresenter as P;
 use Illuminate\Http\JsonResponse;
 
-/** Admin "Questions & Answers" page. Same shapes as mockApi.js getQuizzes / getQuiz. */
 class QuizController extends Controller
 {
     public function index(): JsonResponse
@@ -19,12 +18,7 @@ class QuizController extends Controller
 
     public function show(AssessmentCategory $category): JsonResponse
     {
-        $category->loadCount('questions')->load([
-            'subCategories',
-            'questions.options',
-            'questions.category',
-            'questions.subCategory',
-        ]);
+        $category->loadCount('questions')->load(['subCategories', 'questions.options']);
 
         return response()->json($this->summary($category) + [
             'instructions' => P::pair($category->instructions, $category->instructions_ta),
@@ -40,19 +34,7 @@ class QuizController extends Controller
                 'max_score' => $s->max_score,
             ])->values(),
             'bands' => $category->scoreBands()->get(['sub_category_id', 'min_score', 'max_score', 'label', 'level']),
-            'questions' => $category->questions->map(fn ($q) => P::question($q, admin: true) + [
-                'category' => [
-                    'id' => $q->category->id,
-                    'code' => $q->category->code,
-                    'title' => $q->category->title,
-                    'domain' => $q->category->domain,
-                ],
-                'sub_category' => $q->subCategory ? [
-                    'id' => $q->subCategory->id,
-                    'code' => $q->subCategory->code,
-                    'name' => P::pair($q->subCategory->name, $q->subCategory->name_ta),
-                ] : null,
-            ])->values(),
+            'questions' => $category->questions->map(fn ($q) => P::question($q, admin: true))->values(),
         ]);
     }
 

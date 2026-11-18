@@ -1,3 +1,4 @@
+
 {
   "code": "GDS15",
   "title": "Geriatric Depression Scale (Short Form)",
@@ -6,20 +7,23 @@
   "instructions": "Choose the best answer for how you felt over the past week.",
   "sort_order": 5,
   "total_mode": "sum",
-  "question_type": "Yes no",
+  "question_type": "choice",
+
   "option_sets": {
     "yesno": [
       {
-        "value": 1,
+        "value": "Yes",
         "label": "Yes"
       },
       {
-        "value": 2,
+        "value": "No",
         "label": "No"
       }
     ]
   },
+
   "sub_categories": [],
+
   "bands": {
     "total": [
       {
@@ -37,171 +41,127 @@
       }
     ]
   },
+
   "questions": [
     {
       "number": 1,
       "text": "Are you basically satisfied with your life?",
-      "text_ta": "உங்கள் வாழ்க்கையில் நீங்கள் அடிப்படையில் திருப்தியாக இருக்கிறீர்களா?",
       "sub_category": null,
       "options": "yesno",
-      "scores": [
-        0,
-        1
-      ]
+      "correct_answer": "No",
+      "scores": [ 0, 1 ]
     },
     {
       "number": 2,
       "text": "Have you dropped many of your activities and interests?",
-      "text_ta": "உங்கள் பல செயல்பாடுகளும் ஆர்வங்களையும் கைவிட்டுவிட்டீர்களா?",
       "sub_category": null,
       "options": "yesno",
-      "scores": [
-        1,
-        0
-      ]
+      "correct_answer": "Yes",
+      "scores": [ 1,0 ]
     },
     {
       "number": 3,
       "text": "Do you feel that your life is empty?",
-      "text_ta": "உங்கள் வாழ்க்கை வெறுமையாக உள்ளதாக உணர்கிறீர்களா?",
       "sub_category": null,
       "options": "yesno",
-      "scores": [
-        1,
-        0
-      ]
+      "correct_answer": "Yes",
+      "scores": [ 1, 0 ]
     },
     {
       "number": 4,
       "text": "Do you often get bored?",
-      "text_ta": "நீங்கள் அடிக்கடி சலிப்படைகிறீர்களா?",
       "sub_category": null,
       "options": "yesno",
-      "scores": [
-        1,
-        0
-      ]
+      "correct_answer": "Yes",
+      "scores": [ 1, 0 ]
     },
     {
       "number": 5,
       "text": "Are you in good spirits most of the time?",
-      "text_ta": "பெரும்பாலான நேரங்களில் நீங்கள் நல்ல மனநிலையில் இருக்கிறீர்களா?",
       "sub_category": null,
       "options": "yesno",
-      "scores": [
-        0,
-        1
-      ]
+      "correct_answer": "No",
+      "scores": [ 0, 1 ]
     },
     {
       "number": 6,
       "text": "Are you afraid that something bad is going to happen to you?",
-      "text_ta": "உங்களுக்கு ஏதாவது கெடுதல் நடக்கும் என்று பயப்படுகிறீர்களா?",
       "sub_category": null,
       "options": "yesno",
-      "scores": [
-        1,
-        0
-      ]
+      "correct_answer": "Yes",
+      "scores": [ 1, 0 ]
     },
     {
       "number": 7,
       "text": "Do you feel happy most of the time?",
-      "text_ta": "பெரும்பாலான நேரங்களில் நீங்கள் மகிழ்ச்சியாக உணர்கிறீர்களா?",
       "sub_category": null,
       "options": "yesno",
-      "scores": [
-        0,
-        1
-      ]
+      "correct_answer": "No",
+      "scores": [ 0, 1 ]
     },
     {
       "number": 8,
       "text": "Do you often feel helpless?",
-      "text_ta": "நீங்கள் அடிக்கடி உதவியற்றதாக உணருகிறீர்களா?",
       "sub_category": null,
       "options": "yesno",
-      "scores": [
-        1,
-        0
-      ]
+      "correct_answer": "Yes",
+      "scores": [ 1, 0 ]
     },
     {
       "number": 9,
       "text": "Do you prefer to stay at home, rather than going out and doing new things?",
-      "text_ta": "வெளியே சென்று புதிய விஷயங்களைக் செய்வதை விட வீட்டிலேயே இருக்க விரும்புகிறீர்களா?",
       "sub_category": null,
       "options": "yesno",
-      "scores": [
-        1,
-        0
-      ]
+      "correct_answer": "Yes",
+      "scores": [ 1, 0 ]
     },
     {
       "number": 10,
       "text": "Do you feel you have more problems with memory than most people?",
-      "text_ta": "பெரும்பாலான மக்கனை விட, நினைவாற்றலில் அதிக பிரச்சினைகளைக் கொண்டுள்ளீர்கள் என்று உணருகிறீர்களா?",
       "sub_category": null,
       "options": "yesno",
-      "scores": [
-        1,
-        0
-      ]
+      "correct_answer": "Yes",
+      "scores": [ 1, 0 ]
     },
     {
       "number": 11,
       "text": "Do you think it is wonderful to be alive?",
-      "text_ta": "உயிரோடு இருப்பது அருமை என்று நினைக்கிறீர்களா?",
       "sub_category": null,
       "options": "yesno",
-      "scores": [
-        0,
-        1
-      ]
+      "correct_answer": "No",
+      "scores": [ 0, 1 ]
     },
     {
       "number": 12,
       "text": "Do you feel pretty worthless the way you are now?",
-      "text_ta": "இப்போது நீங்கள் இருக்கும்விதத்தில் உங்களுக்கே நீங்கள் மதிப்பற்றவராக உள்ளதாக உணர்கிறீர்களா?",
       "sub_category": null,
       "options": "yesno",
-      "scores": [
-        1,
-        0
-      ]
+      "correct_answer": "Yes",
+      "scores": [ 1, 0 ]
     },
     {
       "number": 13,
       "text": "Do you feel full of energy?",
-      "text_ta": "நீங்கள் ஆற்றல் நிறைந்ததாக உணர்கிறீர்களா?",
       "sub_category": null,
       "options": "yesno",
-      "scores": [
-        0,
-        1
-      ]
+      "correct_answer": "No",
+      "scores": [ 0, 1 ]
     },
     {
       "number": 14,
       "text": "Do you feel that your situation is hopeless?",
-      "text_ta": "உங்கள் நிலைமை நம்பிக்கையற்றதாக உணர்கிறீர்களா?",
       "sub_category": null,
       "options": "yesno",
-      "scores": [
-        1,
-        0
-      ]
+      "correct_answer": "Yes",
+      "scores": [ 1, 0 ]
     },
     {
       "number": 15,
       "text": "Do you think that most people are better off than you are?",
-      "text_ta": "பெரும்பாலான மக்கள் உங்களைவிட வசதியாக அல்லது நல்ல நிலைமையில் இருக்கிறார்கள் என்று நினைக்கிறீர்களா?",
       "sub_category": null,
       "options": "yesno",
-      "scores": [
-        1,
-        0
-      ]
+      "correct_answer": "Yes",
+      "scores": [ 1, 0 ]
     }
   ]
 }

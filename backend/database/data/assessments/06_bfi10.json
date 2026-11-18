@@ -59,14 +59,9 @@
     }
   ],
   "subcategory_bands": [
+
     {
-      "min": 2,
-      "max": 2,
-      "label": "Very Low",
-      "level": "very_low"
-    },
-    {
-      "min": 3,
+      "min": 1,
       "max": 4,
       "label": "Low",
       "level": "low"
@@ -79,15 +74,9 @@
     },
     {
       "min": 7,
-      "max": 8,
+      "max": 10,
       "label": "High",
       "level": "high"
-    },
-    {
-      "min": 9,
-      "max": 10,
-      "label": "Very High",
-      "level": "very_high"
     }
   ],
   "bands": {},
@@ -95,7 +84,6 @@
     {
       "number": 1,
       "text": "I see myself as someone who is reserved",
-      "text_ta": "மறைவாக இருப்பவர் (தனிமையை விரும்புபவர்)",
       "sub_category": "E",
       "options": "bfi5",
       "reverse": true
@@ -103,14 +91,12 @@
     {
       "number": 2,
       "text": "I see myself as someone who is generally trusting",
-      "text_ta": "பொறுமையாக மற்றவர்களை நம்புபவர்",
       "sub_category": "A",
       "options": "bfi5"
     },
     {
       "number": 3,
       "text": "I see myself as someone who tends to be lazy",
-      "text_ta": "சோம்பேறித்தனமாக இருக்க வாய்ப்புள்ளவர்",
       "sub_category": "C",
       "options": "bfi5",
       "reverse": true
@@ -118,7 +104,6 @@
     {
       "number": 4,
       "text": "I see myself as someone who is relaxed, handles stress well",
-      "text_ta": "நிதானமாக இருப்பவர், மன அழுத்தத்தை நன்கு கையாள்பவர்",
       "sub_category": "N",
       "options": "bfi5",
       "reverse": true
@@ -126,7 +111,6 @@
     {
       "number": 5,
       "text": "I see myself as someone who has few artistic interests",
-      "text_ta": "கலை ஆர்வங்கள் குறைவாக உள்ளவர்",
       "sub_category": "O",
       "options": "bfi5",
       "reverse": true
@@ -134,14 +118,12 @@
     {
       "number": 6,
       "text": "I see myself as someone who is outgoing, sociable",
-      "text_ta": "வெளிச்செல்பதும், சமூகமாக பழகுபவர்",
       "sub_category": "E",
       "options": "bfi5"
     },
     {
       "number": 7,
       "text": "I see myself as someone who tends to find fault with others",
-      "text_ta": "மற்றவர்களில் குறைகளை கண்டுபிடிக்கக் கூடியவர்",
       "sub_category": "A",
       "options": "bfi5",
       "reverse": true
@@ -149,21 +131,18 @@
     {
       "number": 8,
       "text": "I see myself as someone who does a thorough job",
-      "text_ta": "வேலையை முழுமையாகச் செய்வர்",
       "sub_category": "C",
       "options": "bfi5"
     },
     {
       "number": 9,
       "text": "I see myself as someone who gets nervous easily",
-      "text_ta": "எளிதில் பதற்றுபவர்",
       "sub_category": "N",
       "options": "bfi5"
     },
     {
       "number": 10,
       "text": "I see myself as someone who has an active imagination",
-      "text_ta": "சுறுசுறுப்பான கற்பனையுள்ளவர்",
       "sub_category": "O",
       "options": "bfi5"
     }

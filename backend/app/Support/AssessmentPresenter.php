@@ -36,7 +36,6 @@ final class AssessmentPresenter
             'number' => $q->number,
             'order' => $q->number,
             'type' => $q->type,
-            'scale_type' => $q->scale_type,
             'sub_category_id' => $q->sub_category_id,
             'text' => self::pair($q->text, $q->text_ta),
             'options' => $q->options->map(fn ($o) => self::option($o, $admin))->values()->all(),

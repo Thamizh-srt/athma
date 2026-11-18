@@ -9,7 +9,6 @@ use App\Models\PatientAnswer;
 use App\Models\PatientAssessment;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Validation\ValidationException;
-use Symfony\Component\HttpKernel\Exception\HttpException;
 
 class AssessmentService
 {
@@ -30,12 +29,9 @@ class AssessmentService
                 ['status' => PatientAssessment::IN_PROGRESS, 'language' => $language ?? 'en', 'started_at' => now()]
             );
 
-            // lock the row so two quick submits cannot both pass the "already completed" check
+            // Serialize answer updates and submissions for this attempt.
             $attempt = PatientAssessment::whereKey($attempt->id)->lockForUpdate()->firstOrFail();
 
-            if ($attempt->isCompleted()) {
-                throw new HttpException(409, 'This assessment has already been submitted.');
-            }
             if ($language && $attempt->language !== $language) {
                 $attempt->update(['language' => $language]);
             }
@@ -58,6 +54,14 @@ class AssessmentService
             }
             if ($errors) {
                 throw ValidationException::withMessages($errors);
+            }
+
+            if ($attempt->isCompleted() && $chosen) {
+                $attempt->update([
+                    'status' => PatientAssessment::IN_PROGRESS,
+                    'completed_at' => null,
+                ]);
+                $attempt->results()->delete();
             }
 
             foreach ($chosen as [$questionId, $option]) {

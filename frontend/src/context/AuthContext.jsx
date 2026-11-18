@@ -14,7 +14,7 @@ export function AuthProvider({ children }) {
   }, []);
 
   const login = useCallback(async (values) => persist(await authApi.login(values)), [persist]);
-  const register = useCallback(async (values) => persist(await authApi.register(values)), [persist]);
+  const register = useCallback((values) => authApi.register(values), []);
 
   const logout = useCallback(async () => {
     try {

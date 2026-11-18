@@ -55,7 +55,7 @@ class AssessmentSeeder extends Seeder
                     'text' => $q['text'],
                     'text_ta' => $q['text_ta'],
                     'type' => $q['type'],
-                    'scale_type' => $q['scale_type'] ?? null,
+                    'scale_type' => $q['scale_type']?? null,
                 ]
             );
 

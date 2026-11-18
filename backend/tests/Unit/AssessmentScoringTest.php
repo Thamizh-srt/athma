@@ -206,8 +206,15 @@ class AssessmentScoringTest extends TestCase
             }
         }
         $this->assertSame([21 => [1, 2, 3, 4], 28 => [1, 2, 3, 4]], $flagged);
+        foreach ($d['questions'] as $question) {
+            $this->assertSame(
+                array_column($question['options'], 'value'),
+                array_column($question['options'], 'score'),
+                "MHI-38 question {$question['number']} should score options by value"
+            );
+        }
         $r = $this->run_('02_mhi38.json', fn () => 1);
         $this->assertArrayNotHasKey('TOTAL', $r);
-        $this->assertSame([54, 23, 38, 60, 12, 6], [$r['ANX']['score'], $r['DEP']['score'], $r['LBEC']['score'], $r['GPA']['score'], $r['ET']['score'], $r['LS']['score']]);
+        $this->assertSame([9, 4, 9, 10, 2, 1], [$r['ANX']['score'], $r['DEP']['score'], $r['LBEC']['score'], $r['GPA']['score'], $r['ET']['score'], $r['LS']['score']]);
     }
 }

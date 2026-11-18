@@ -8,6 +8,7 @@ import AdminLayout from "./components/AdminLayout";
 const AdminLoginPage = lazy(() => import("./auth/AdminLoginPage"));
 const OverviewPage = lazy(() => import("./pages/OverviewPage"));
 const PatientsPage = lazy(() => import("./pages/PatientsPage"));
+const PatientDetailPage = lazy(() => import("./pages/PatientDetailPage"));
 const QuizzesPage = lazy(() => import("./pages/QuizzesPage"));
 const QuizDetailPage = lazy(() => import("./pages/QuizDetailPage"));
 const ComingSoonPage = lazy(() => import("./pages/ComingSoonPage"));
@@ -23,6 +24,7 @@ export default function AdminApp() {
             <Route element={<AdminLayout />}>
               <Route index element={<OverviewPage />} />
               <Route path="patients" element={<PatientsPage />} />
+              <Route path="patients/:patientId" element={<PatientDetailPage />} />
               <Route path="questions" element={<QuizzesPage />} />
               <Route path="questions/:quizId" element={<QuizDetailPage />} />
               <Route path="reports" element={<ComingSoonPage title="Reports" subtitle="Assessment reports and exports" />} />

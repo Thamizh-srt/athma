@@ -1,4 +1,5 @@
 import { useDeferredValue, useMemo, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { adminApi } from "../api/adminApi";
 import { useAsync } from "../hooks/useAsync";
 import { daysSince, formatDate } from "../utils/format";
@@ -22,21 +23,21 @@ const TH = "bg-orange-50/60 px-7 py-4 text-left text-[13px] font-medium text-sto
 const TD = "border-t border-orange-100/60 px-7 py-3.5 align-middle text-[15px]";
 const PAGE_SIZE = 5;
 
+
 export default function PatientsPage() {
-  const { data, loading, error } = useAsync(adminApi.getPatients, []);
-  const [query, setQuery] = useState("");
-  const [filter, setFilter] = useState("all");
-  const [page, setPage] = useState(1);
-  const deferredQuery = useDeferredValue(query);
-
-  const patientsData = data?.patients;
-
-  const patients = patientsData?.data ?? [];
-  const totalPatients = patientsData?.total ?? 0;
-  const currentPage = patientsData?.current_page ?? 1;
-  const lastPage = patientsData?.last_page ?? 1;
-  const perPage = patientsData?.per_page ?? 20;
-  
+    const { data, loading, error } = useAsync(adminApi.getPatients, []);
+    const [query, setQuery] = useState("");
+    const [filter, setFilter] = useState("all");
+    const [page, setPage] = useState(1);
+    const deferredQuery = useDeferredValue(query);    
+    const patientsData = data?.patients;    
+    const patients = patientsData?.data ?? [];
+    const totalPatients = patientsData?.total ?? 0;
+    const currentPage = patientsData?.current_page ?? 1;
+    const lastPage = patientsData?.last_page ?? 1;
+    const perPage = patientsData?.per_page ?? 20;
+    const navigate = useNavigate();
+    
   const filtered = useMemo(() => {
     const q = deferredQuery.trim().toLowerCase();
     return patients.filter((p) => {
@@ -96,7 +97,7 @@ export default function PatientsPage() {
             </thead>
             <tbody>
               {pagePatients.map((p) => (
-                <tr key={p.id}>
+                <tr key={p.id} className="row-link" onClick={() => navigate(`/admin/patients/${p.id}`)}>
                   <td className={TD}>
                     <div className="flex items-center gap-3.5">
                       <Avatar name={p.full_name} large />

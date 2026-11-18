@@ -32,13 +32,13 @@
         {
           "min": 0,
           "max": 6,
-          "label": "Normal",
+          "label": "Not Indicated",
           "level": "normal"
         },
         {
           "min": 7,
           "max": 26,
-          "label": "Above cut-off",
+          "label": "Indicated",
           "level": "high",
           "interpretation": "May indicate Panic Disorder or significant somatic symptoms"
         }
@@ -52,13 +52,13 @@
         {
           "min": 0,
           "max": 8,
-          "label": "Normal",
+          "label": "Not Indicated",
           "level": "normal"
         },
         {
           "min": 9,
           "max": 18,
-          "label": "Above cut-off",
+          "label": "Indicated",
           "level": "high",
           "interpretation": "May indicate Generalized Anxiety Disorder"
         }
@@ -72,13 +72,13 @@
         {
           "min": 0,
           "max": 4,
-          "label": "Normal",
+          "label": "Not Indicated",
           "level": "normal"
         },
         {
           "min": 5,
           "max": 16,
-          "label": "Above cut-off",
+          "label": "Indicated",
           "level": "high",
           "interpretation": "May indicate Separation Anxiety Disorder"
         }
@@ -92,13 +92,13 @@
         {
           "min": 0,
           "max": 7,
-          "label": "Normal",
+          "label": "Not Indicated",
           "level": "normal"
         },
         {
           "min": 8,
           "max": 14,
-          "label": "Above cut-off",
+          "label": "Indicated",
           "level": "high",
           "interpretation": "May indicate Social Anxiety Disorder"
         }
@@ -112,13 +112,13 @@
         {
           "min": 0,
           "max": 2,
-          "label": "Normal",
+          "label": "Not Indicated",
           "level": "normal"
         },
         {
           "min": 3,
           "max": 8,
-          "label": "Above cut-off",
+          "label": "Indicated",
           "level": "high",
           "interpretation": "May indicate significant school avoidance"
         }
@@ -130,7 +130,7 @@
       {
         "min": 0,
         "max": 24,
-        "label": "Normal",
+        "label": "Not Indicated",
         "level": "normal"
       },
       {
@@ -153,287 +153,246 @@
     {
       "number": 1,
       "text": "When my child feels frightened, it is hard for him/her to breathe",
-      "text_ta": "என் குழந்தை பயப்படும்போது, அவனுக்கு சுவாசிப்பது கடினமாக இருக்கிறது",
       "sub_category": "PAN",
       "options": "scared3"
     },
     {
       "number": 2,
       "text": "My child gets headaches when he/she is at school",
-      "text_ta": "என் குழந்தை பள்ளியில் இருக்கும்போது தலைவலி ஏற்படுகிறது",
       "sub_category": "SCH",
       "options": "scared3"
     },
     {
       "number": 3,
       "text": "My child doesn't like to be with people he/she doesn't know well",
-      "text_ta": "தெரியாதவர்களுடன் இருக்க என் குழந்தைக்கு விருப்பமில்லை",
       "sub_category": "SOC",
       "options": "scared3"
     },
     {
       "number": 4,
       "text": "My child gets scared if he/she sleeps away from home",
-      "text_ta": "என் குழந்தை வீட்டைவிட்டு வெளியே தூங்கும்போது பயப்படுகிறார்",
       "sub_category": "SEP",
       "options": "scared3"
     },
     {
       "number": 5,
       "text": "My child worries about other people liking him/her",
-      "text_ta": "மற்றவர்கள் என் குழந்தையை விரும்புகிறார்களா என்று குழந்தை கவலைப்படுகிறார்",
       "sub_category": "GAD",
       "options": "scared3"
     },
     {
       "number": 6,
       "text": "When my child gets frightened, he/she feels like passing out",
-      "text_ta": "என் குழந்தை பயப்படும்போது, மயக்கம் போல் உணருகிறார்",
       "sub_category": "PAN",
       "options": "scared3"
     },
     {
       "number": 7,
       "text": "My child is nervous",
-      "text_ta": "என் குழந்தை பதட்டமாக இருக்கிறார்",
       "sub_category": "GAD",
       "options": "scared3"
     },
     {
       "number": 8,
       "text": "My child follows me wherever I go",
-      "text_ta": "நான் எங்கு சென்றாலும் என் குழந்தை பின்தொடருகிறார்",
       "sub_category": "SEP",
       "options": "scared3"
     },
     {
       "number": 9,
       "text": "People tell me that my child looks nervous",
-      "text_ta": "என் குழந்தை பதட்டமாக இருக்கிறார் என்று மற்றவர்கள் கூறுகிறார்கள்",
       "sub_category": "PAN",
       "options": "scared3"
     },
     {
       "number": 10,
       "text": "My child feels nervous with people he/she doesn't know well",
-      "text_ta": "தெரியாதவர்களுடன் இருக்கும் போது என் குழந்தை பதட்டமாக இருக்கிறார்",
       "sub_category": "SOC",
       "options": "scared3"
     },
     {
       "number": 11,
       "text": "My child gets stomachaches at school",
-      "text_ta": "பள்ளியில் என் குழந்தைக்கு வயிற்று வலி ஏற்படுகிறது",
       "sub_category": "SCH",
       "options": "scared3"
     },
     {
       "number": 12,
       "text": "When my child gets frightened, he/she feels like he/she is going crazy",
-      "text_ta": "என் குழந்தை பயப்படும்போது, அவனுக்கு/அவளுக்கு பைத்தியம் பிடித்தது போன்ற உணர்வு ஏற்படுகிறது",
       "sub_category": "PAN",
       "options": "scared3"
     },
     {
       "number": 13,
       "text": "My child worries about sleeping alone",
-      "text_ta": "தனியாகத் தூங்குவதில் என் குழந்தை கவலைப்படுகிறார்",
       "sub_category": "SEP",
       "options": "scared3"
     },
     {
       "number": 14,
       "text": "My child worries about being as good as other kids",
-      "text_ta": "மற்ற குழந்தைகளைப் போல நல்ல நன்றாக இருப்பதில் என் குழந்தை கவலைப்படுகிறார்",
       "sub_category": "GAD",
       "options": "scared3"
     },
     {
       "number": 15,
       "text": "When he/she gets frightened, he/she feels like things are not real",
-      "text_ta": "என் குழந்தை பயப்படும்போது, விஷயங்கள் உண்மையானவை அல்ல என்று உணருகிறார்",
       "sub_category": "PAN",
       "options": "scared3"
     },
     {
       "number": 16,
       "text": "My child has nightmares about something bad happening to his/her parents",
-      "text_ta": "அவரது பெற்றோருக்கு ஏதாவது கெட்டது நடக்கும் என்று என் குழந்தைக்கு கனவுகள் வருகிறார்",
       "sub_category": "SEP",
       "options": "scared3"
     },
     {
       "number": 17,
       "text": "My child worries about going to school",
-      "text_ta": "பள்ளிக்குச் செல்வதில் என் குழந்தை கவலைப்படுகிறார்",
       "sub_category": "SCH",
       "options": "scared3"
     },
     {
       "number": 18,
       "text": "When my child gets frightened, his/her heart beats fast",
-      "text_ta": "என் குழந்தை பயப்படும்போது, அவனுடைய/அவளுடைய இதயம் வேகமாகத் துடிக்கிறது",
       "sub_category": "PAN",
       "options": "scared3"
     },
     {
       "number": 19,
       "text": "He/she gets shaky",
-      "text_ta": "அவன்/அவள் நடுங்குகிறார்",
       "sub_category": "PAN",
       "options": "scared3"
     },
     {
       "number": 20,
       "text": "My child has nightmares about something bad happening to him/her",
-      "text_ta": "தனக்கு ஏதாவது கெட்டது நடக்கும் என்று என் குழந்தைக்கு கனவுகள் வருகிறார்",
       "sub_category": "SEP",
       "options": "scared3"
     },
     {
       "number": 21,
       "text": "My child worries about things working out for him/her",
-      "text_ta": "தனக்கு நேரிடும் காரியங்கள் சரியாக நடக்குமா என்று என் குழந்தை கவலைப்படுகிறார்",
       "sub_category": "GAD",
       "options": "scared3"
     },
     {
       "number": 22,
       "text": "When my child gets frightened, he/she sweats a lot",
-      "text_ta": "என் குழந்தை பயப்படும்போது, அவனுக்கு/அவளுக்கு அதிகமாக வியர்க்கிறது",
       "sub_category": "PAN",
       "options": "scared3"
     },
     {
       "number": 23,
       "text": "My child is a worrier",
-      "text_ta": "என் குழந்தை அதிகம் கவலைப்படுபவர்",
       "sub_category": "GAD",
       "options": "scared3"
     },
     {
       "number": 24,
       "text": "My child gets really frightened for no reason at all",
-      "text_ta": "எந்த காரணமுமின்றி என் குழந்தை மிகவும் பயப்படுகிறார்",
       "sub_category": "PAN",
       "options": "scared3"
     },
     {
       "number": 25,
       "text": "My child is afraid to be alone in the house",
-      "text_ta": "வீட்டில் தனியாக இருக்கும்போது என் குழந்தை பயப்படுகிறார்",
       "sub_category": "SEP",
       "options": "scared3"
     },
     {
       "number": 26,
       "text": "It is hard for my child to talk with people he/she doesn't know well",
-      "text_ta": "தெரியாதவர்களுடன் பேசுவது என் குழந்தைக்கு கடினமாக இருக்கிறது",
       "sub_category": "SOC",
       "options": "scared3"
     },
     {
       "number": 27,
       "text": "When my child gets frightened, he/she feels like he/she is choking",
-      "text_ta": "என் குழந்தை பயப்படும்போது, மூச்சுத் திணறுவது போல உணருகிறார்",
       "sub_category": "PAN",
       "options": "scared3"
     },
     {
       "number": 28,
       "text": "People tell me that my child worries too much",
-      "text_ta": "என் குழந்தை அதிகம் கவலைப்படுகிறார் என்று மற்றவர்கள் சொல்லிக்கொண்டிருக்கிறார்கள்",
       "sub_category": "GAD",
       "options": "scared3"
     },
     {
       "number": 29,
       "text": "My child doesn't like to be away from his/her family",
-      "text_ta": "குடும்பத்தை விட்டு வெளியே இருக்க என் குழந்தை விரும்புவதில்லை",
       "sub_category": "SEP",
       "options": "scared3"
     },
     {
       "number": 30,
       "text": "My child is afraid of having anxiety (or panic) attacks",
-      "text_ta": "கவலை அல்லது பீதித் தாக்கங்கள் வரும் என்று என் குழந்தை பயப்படுகிறது",
       "sub_category": "PAN",
       "options": "scared3"
     },
     {
       "number": 31,
       "text": "My child worries that something bad might happen to his/her parents",
-      "text_ta": "பெற்றோருக்கு ஏதாவது கெட்டது நடக்கலாம் என்று என் குழந்தை கவலைப்படுகிறது",
       "sub_category": "SEP",
       "options": "scared3"
     },
     {
       "number": 32,
       "text": "My child feels shy with people he/she doesn't know well",
-      "text_ta": "தெரியாதவர்களுடன் இருக்கும் போது என் குழந்தை வெட்கப்படுகிறது",
       "sub_category": "SOC",
       "options": "scared3"
     },
     {
       "number": 33,
       "text": "My child worries about what is going to happen in the future",
-      "text_ta": "எதிர்காலத்தில் என்ன நடக்கும் என்று என் குழந்தை கவலைப்படுகிறது",
       "sub_category": "GAD",
       "options": "scared3"
     },
     {
       "number": 34,
       "text": "When my child gets frightened, he/she feels like throwing up",
-      "text_ta": "என் குழந்தை பயப்படும்போது, வாந்தி வருவது போல உணர்கிறது",
       "sub_category": "PAN",
       "options": "scared3"
     },
     {
       "number": 35,
       "text": "My child worries about how well he/she does things",
-      "text_ta": "தான் செய்யும் செயல்களைச் சரியாகச் செய்வதில் கவலைப்படுகிறார்",
       "sub_category": "GAD",
       "options": "scared3"
     },
     {
       "number": 36,
       "text": "My child is scared to go to school",
-      "text_ta": "பள்ளிக்குச் செல்ல என் குழந்தை பயப்படுகிறார்",
       "sub_category": "SCH",
       "options": "scared3"
     },
     {
       "number": 37,
       "text": "My child worries about things that have already happened",
-      "text_ta": "ஏற்கனவே நடந்த விஷயங்களைப் பற்றி என் குழந்தை கவலைப்படுகிறார்",
       "sub_category": "GAD",
       "options": "scared3"
     },
     {
       "number": 38,
       "text": "When my child gets frightened, he/she feels dizzy",
-      "text_ta": "என் குழந்தை பயப்படும்போது, தலைசுற்றல் ஏற்படுகிறது",
       "sub_category": "PAN",
       "options": "scared3"
     },
     {
       "number": 39,
       "text": "My child feels nervous when he/she is with other children or adults and he/she has to do something while they watch him/her (for example: read aloud, speak, play a game, play a sport)",
-      "text_ta": "மற்ற குழந்தைகள் அல்லது பெரியவர்கள் பார்ப்பதற்கு ஏதாவது செய்ய வேண்டியிருந்தால் (உதாரணமாக: சத்தமாகப் படிப்பு, பேச்சு, விளையாட்டு, விளையாட்டு) என் குழந்தை பதட்டமாக உணருகிறது",
       "sub_category": "SOC",
       "options": "scared3"
     },
     {
       "number": 40,
       "text": "My child feels nervous when he/she is going to parties, dances, or any place where there will be people that he/she doesn't know well",
-      "text_ta": "விழாக்குகள், நடனங்கள் அல்லது நன்றாக அறிந்திருக்காத பெரியவர்கள் இருக்கும் இடங்களுக்கு சென்றால் என் குழந்தை பதட்டமாக உணருகிறது",
       "sub_category": "SOC",
       "options": "scared3"
     },
     {
       "number": 41,
       "text": "My child is shy",
-      "text_ta": "என் குழந்தை வெட்கப்படுகிறார்",
       "sub_category": "SOC",
       "options": "scared3"
     }

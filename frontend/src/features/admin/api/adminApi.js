@@ -1,19 +1,21 @@
-import client from "@/api/client";
 
-// const USE_MOCK = import.meta.env.VITE_USE_MOCK === "true";
-// const loadMock = () => import("./mockApi"); // only downloaded when mock mode is on
+const get = (url, params) =>
+  client.get(url, { params }).then((r) => r.data);
 
-const get = (url, params) => client.get(url, { params }).then((r) => r.data);
-
-// route(mockFnName, realFn) -> function that picks mock or real at call time
-const route = (name, real) => (...args) => real(...args);
+const post = (url, data) =>
+  client.post(url, data).then((r) => r.data);
 
 export const adminApi = {
-  login: route("login", (c) => client.post("/admin/auth/login", c).then((r) => r.data)),
-  logout: route("logout", () => client.post("/admin/auth/logout")),
-  getOverview: route("getOverview", () => get("/admin/overview")),
-  getPatients: route("getPatients", () => get("/admin/patients")),
-  getQuizzes: route("getQuizzes", () => get("/admin/questions")),
-  getQuiz: route("getQuiz", (id) => get(`/admin/quizzes/${id}`)),
-  getAttemptReport: route("getAttemptReport", (id) => get(`/admin/attempts/${id}/report`)),
+  login: (credentials) => post("/admin/auth/login", credentials),
+  logout: () => post("/admin/auth/logout", {}),
+  getOverview: () => get("/admin/overview"),
+  getPatients: (params) => get("/admin/patients", params),
+  getPatient: (id) => get(`/admin/patients/${id}`),
+  getPatientAssessments: (id) =>
+    get(`/admin/patients/${id}/assessments`),
+  getPatientAssessment: (id, categoryId) =>
+    get(`/admin/patients/${id}/assessments/${categoryId}`),
+  getQuizzes: (params) => get("/admin/quizzes", params),
+  getQuiz: (id) => get(`/admin/quizzes/${id}`),
+  getAttemptReport: (id) => get(`/admin/attempts/${id}/report`),
 };

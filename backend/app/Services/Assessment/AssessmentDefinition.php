@@ -41,15 +41,68 @@ final class AssessmentDefinition
             $options = is_string($q['options'])
                 ? ($sets[$q['options']] ?? throw new InvalidArgumentException("Unknown option set '{$q['options']}'"))
                 : $q['options'];
-
+           
             $values = array_column($options, 'value');
-            $lo = min($values);
-            $hi = max($values);
+
             $flags = $q['flag_values'] ?? [];
+            $explicitScores = $q['scores'] ?? null;
+
+            $numericValues = null;
+            $lo = null;
+            $hi = null;
+
+            if ($explicitScores === null) {
+                foreach ($values as $value) {
+                    if (!is_numeric($value)) {
+                        throw new InvalidArgumentException(
+                            "Question {$q['number']} requires explicit scores for non-numeric options"
+                        );
+                    }
+                }
+
+                $numericValues = array_map(
+                    static fn ($value) => (float) $value,
+                    $values
+                );
+
+                $lo = min($numericValues);
+                $hi = max($numericValues);
+            }
 
             $resolved = [];
+
             foreach (array_values($options) as $i => $o) {
-                $score = $q['scores'][$i] ?? (! empty($q['reverse']) ? $lo + $hi - $o['value'] : $o['value']);
+
+                // 1. Explicit scoring
+                if ($explicitScores !== null) {
+
+                    if (!array_key_exists($i, $explicitScores)) {
+                        throw new InvalidArgumentException(
+                            "Missing score for option {$o['value']} in question {$q['number']}"
+                        );
+                    }
+
+                    $score = $explicitScores[$i];
+
+                    if (!is_numeric($score)) {
+                        throw new InvalidArgumentException(
+                            "Invalid score for option {$o['value']} in question {$q['number']}"
+                        );
+                    }
+
+                    $score = (float) $score;
+
+                // 2. Reverse scoring
+                } elseif (!empty($q['reverse'])) {
+
+                    $score = $lo + $hi - $numericValues[$i];
+
+                // 3. Default numeric scoring
+                } else {
+
+                    $score = $o['value'];
+                }
+
                 $resolved[] = [
                     'value' => $o['value'],
                     'label' => $o['label'],
@@ -59,6 +112,7 @@ final class AssessmentDefinition
                     'sort_order' => $i + 1,
                 ];
             }
+
 
             $scores = array_column($resolved, 'score');
             $qMin = min($scores);
@@ -80,7 +134,6 @@ final class AssessmentDefinition
                 'text' => $q['text'],
                 'text_ta' => $q['text_ta'] ?? null,
                 'type' => $q['type'] ?? $defaultType,
-                'scale_type' => $q['scale_type'] ?? null,
                 'sub_category' => $sub,
                 'options' => $resolved,
                 'min_score' => $qMin,

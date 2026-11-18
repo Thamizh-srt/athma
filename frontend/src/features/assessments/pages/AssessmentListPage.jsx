@@ -78,12 +78,12 @@ export default function AssessmentListPage() {
         {!loading && !error && catalog.length > 0 && (
           <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {catalog.map((assessment) => {
-              const destination = assessment.status === "completed"
-                ? `/assessments/results/${assessment.id}`
-                : `/assessments/${assessment.id}`;
+              const destination = `/assessments/${assessment.id}`;
 
               return (
                 <li key={assessment.id}>
+                  <Link
+                        to={destination}>
                   <article className="flex h-full min-h-[228px] flex-col rounded-2xl border border-peach-line bg-white p-5 shadow-[0_1px_2px_rgba(70,40,20,0.04)] transition hover:-translate-y-0.5 hover:shadow-md">
                     <div className="mb-4 flex items-center justify-between gap-3">
                       <span className="grid size-9 flex-none place-items-center rounded-xl bg-linear-to-br from-brand-light to-brand text-white shadow-md shadow-brand/25">
@@ -104,17 +104,17 @@ export default function AssessmentListPage() {
                         <HelpIcon size={14} />
                         {assessment.questions_count} {assessment.questions_count === 1 ? "question" : "questions"}
                       </span>
-                      <Link
-                        to={destination}
+                      <div
                         className="inline-flex items-center gap-1 font-semibold text-orange-600 transition hover:text-orange-800"
-                      >
-                        {assessment.status === "completed"
+                      >{"Start"}
+                        {/* {assessment.status === "completed"
                           ? "Results"
-                          : assessment.status === "in_progress" ? "Continue" : "Start"}
+                          : assessment.status === "in_progress" ? "Continue" : "Start"} */}
                         <ArrowIcon />
-                      </Link>
+                      </div>
                     </div>
                   </article>
+                      </Link>
                 </li>
               );
             })}

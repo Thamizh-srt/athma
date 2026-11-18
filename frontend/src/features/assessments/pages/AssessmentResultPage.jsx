@@ -34,7 +34,7 @@ export default function AssessmentResultPage() {
   return (
     <main className="min-h-screen bg-cream px-5 py-8 text-navy sm:px-8">
       <section className="mx-auto max-w-3xl rounded-2xl border border-line bg-white p-5 shadow-sm sm:p-7">
-        <p className="text-sm text-emerald-700">Assessment completed</p>
+        <p className="text-sm text-emerald-700">Answers submitted</p>
         <h1 className="mt-1 text-2xl font-bold">{attempt.title}</h1>
         {attempt.status !== "completed" ? (
           <p className="mt-5 text-muted">This assessment is still in progress.</p>
@@ -70,7 +70,12 @@ export default function AssessmentResultPage() {
             </p>
           </>
         )}
-        <Link to="/dashboard" className="mt-6 inline-block font-medium text-brand">Return to assessments</Link>
+        <div className="mt-6 flex flex-wrap gap-4">
+          <Link to={`/assessments/${categoryId}`} className="font-medium text-brand">
+            Edit answers
+          </Link>
+          <Link to="/dashboard" className="font-medium text-brand">Return to assessments</Link>
+        </div>
       </section>
     </main>
   );

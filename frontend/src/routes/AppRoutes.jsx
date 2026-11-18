@@ -7,7 +7,6 @@ const LoginPage = lazy(() => import("@/features/auth/LoginPage"));
 const RegisterPage = lazy(() => import("@/features/auth/RegisterPage"));
 const DashboardPage = lazy(() => import("@/pages/DashboardPage"));
 const AssessmentPage = lazy(() => import("@/features/assessments/pages/AssessmentPage"));
-const AssessmentResultPage = lazy(() => import("@/features/assessments/pages/AssessmentResultPage"));
 // The whole admin module is one lazy chunk: patients never download it.
 const AdminApp = lazy(() => import("@/features/admin/AdminApp"));
 
@@ -18,7 +17,7 @@ function ProtectedRoute() {
 
 function GuestRoute() {
   const { isAuthenticated } = useAuth();
-  return isAuthenticated ? <Navigate to="/dashboard" replace /> : <Outlet />;
+  return isAuthenticated ? <Navigate to="/questions" replace /> : <Outlet />;
 }
 
 export default function AppRoutes() {
@@ -30,9 +29,8 @@ export default function AppRoutes() {
           <Route path="/register" element={<RegisterPage />} />
         </Route>
         <Route element={<ProtectedRoute />}>
-          <Route path="/dashboard" element={<DashboardPage />} />
+          <Route path="/questions" element={<DashboardPage />} />
           <Route path="/assessments/:categoryId" element={<AssessmentPage />} />
-          <Route path="/assessments/results/:categoryId" element={<AssessmentResultPage />} />
         </Route>
         <Route path="/admin/*" element={<AdminApp />} />
         <Route path="*" element={<Navigate to="/login" replace />} />

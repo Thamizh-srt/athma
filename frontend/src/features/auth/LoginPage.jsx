@@ -28,7 +28,7 @@ export default function LoginPage() {
     setServerError("");
     try {
       await login(values);
-      navigate("/dashboard", { replace: true });
+      navigate("/questions", { replace: true });
     } catch (err) {
       const message = handleApiError(err, setError);
       if (message) setServerError(message);
