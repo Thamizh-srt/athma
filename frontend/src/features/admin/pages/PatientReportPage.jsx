@@ -55,7 +55,7 @@ export default function PatientReportPage() {
                 {item.completed_at ? ` - Completed on ${formatDate(item.completed_at)}` : ""}
               </p>
             </header>
-            <ScoreSummary detail={item.detail} />
+            {/* <ScoreSummary detail={item.detail} /> */}
             <AnswersPanel detail={item.detail} />
           </article>
         )) : (
