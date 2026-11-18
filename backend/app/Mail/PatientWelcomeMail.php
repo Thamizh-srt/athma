@@ -21,7 +21,7 @@ class PatientWelcomeMail extends Mailable
             ->markdown('emails.patient-welcome', [
                 'name' => $this->patient->name,
                 'hospital' => config('app.name'),
-                'loginUrl' => url('/login'),
+                'loginUrl' => url(env('FRONTEND_URL').'/login'),
             ]);
     }
 }
