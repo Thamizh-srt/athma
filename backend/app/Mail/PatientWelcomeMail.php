@@ -19,7 +19,7 @@ class PatientWelcomeMail extends Mailable
     {
         return $this->subject('Welcome to ' . config('app.name'))
             ->markdown('emails.patient-welcome', [
-                'name' => $this->patient->name,
+                'name' => $this->patient->full_name,
                 'hospital' => config('app.name'),
                 'loginUrl' => url(env('FRONTEND_URL').'/login'),
             ]);
