@@ -73,7 +73,6 @@ final class AssessmentDefinition
 
             foreach (array_values($options) as $i => $o) {
 
-                // 1. Explicit scoring
                 if ($explicitScores !== null) {
 
                     if (!array_key_exists($i, $explicitScores)) {
@@ -91,13 +90,9 @@ final class AssessmentDefinition
                     }
 
                     $score = (float) $score;
-
-                // 2. Reverse scoring
                 } elseif (!empty($q['reverse'])) {
 
                     $score = $lo + $hi - $numericValues[$i];
-
-                // 3. Default numeric scoring
                 } else {
 
                     $score = $o['value'];

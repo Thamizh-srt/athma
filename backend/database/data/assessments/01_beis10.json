@@ -139,35 +139,35 @@
     {
       "number": 6,
       "text": "I have control over my emotions",
-      "text_ta": null,
+      "text_ta": "என் உணர்வுகளை நான் கட்டுப்படுத்த முடியும்",
       "sub_category": "ROE",
       "options": "agree5"
     },
     {
       "number": 7,
       "text": "I arrange events others enjoy",
-      "text_ta": null,
+      "text_ta": "மற்றவர்கள் விரும்பும் நிகழ்வுகளை நான் ஏற்பாடு செய்கிறேன்",
       "sub_category": "ROTE",
       "options": "agree5"
     },
     {
       "number": 8,
       "text": "I help other people feel better when they are down",
-      "text_ta": null,
+      "text_ta": "மற்றவர்கள் மனச்சோர்வடைந்திருக்கும்போது அவர்களை சரி செய்ய நான் உதவுகிறேன்",
       "sub_category": "ROTE",
       "options": "agree5"
     },
     {
       "number": 9,
       "text": "When I am in a positive mood, I am able to come up with new ideas",
-      "text_ta": null,
+      "text_ta": "நான் நல்ல மனநிலையில் இருக்கும்போது புதிய யோசனைகளை உருவாக்க முடிகிறது",
       "sub_category": "UE",
       "options": "agree5"
     },
     {
       "number": 10,
       "text": "I use good moods to help myself keep trying in the face of obstacles",
-      "text_ta": null,
+      "text_ta": "தடைகளை எதிர்கொள்ளும்போது தொடர்ந்து முயற்சி செய்ய நல்ல மனநிலையைப் பயன்படுத்துகிறேன்",
       "sub_category": "UE",
       "options": "agree5"
     }

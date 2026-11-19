@@ -98,6 +98,7 @@
     {
       "number": 1,
       "text": "How happy, satisfied, or pleased have you been with your personal life during the past month?",
+      "text_ta": "கடந்த மாதத்தில் உங்கள் தனிப்பட்ட வாழ்க்கையில் எவ்வளவு மகிழ்ச்சியாக, திருப்தியாக இருந்தீர்கள்?",
       "sub_category": "LS",
       "options": [
         {
@@ -130,12 +131,14 @@
     {
       "number": 2,
       "text": "How much of the time have you felt lonely during the past month?",
+      "text_ta":"கடந்த மாதத்தில் எவ்வளவு நேரம் தனிமையாக உணர்ந்தீர்கள்?",
       "sub_category": null,
       "options": "time6"
     },
     {
       "number": 3,
       "text": "How often did you become nervous or jumpy when faced with excitement or unexpected situations during the past month?",
+      "text_ta":"கடந்த மாதத்தில் உற்சாகம் அல்லது எதிர்பாராத சூழ்நிலைகளை எதிர்கொள்ளும்போது எவ்வளவு அடிக்கடி பதட்டமடைந்தீர்கள்?",
       "sub_category": "ANX",
       "options": "freq6",
       "reverse": false
@@ -143,6 +146,7 @@
     {
       "number": 4,
       "text": "During the past month, how much of the time have you felt that the future looks hopeful and promising?",
+      "text_ta":"கடந்த மாதத்தில் எதிர்காலம் நம்பிக்கையாகவும் வளமாகவும் இருக்கும் என்று எவ்வளவு நேரம் உணர்ந்தீர்கள்?",
       "sub_category": "GPA",
       "options": "time6",
       "reverse": false
@@ -150,6 +154,7 @@
     {
       "number": 5,
       "text": "How much of the time, during the past month, has your daily life been full of things that were interesting to you?",
+      "text_ta":"கடந்த மாதத்தில் உங்கள் அன்றாட வாழ்க்கை உங்களுக்கு சுவாரஸ்யமான விஷயங்களால் எவ்வளவு நேரம் நிரம்பியிருந்தது?",
       "sub_category": "GPA",
       "options": "time6",
       "reverse": false
@@ -157,6 +162,7 @@
     {
       "number": 6,
       "text": "How much of the time, during the past month, did you feel relaxed and free from tension?",
+      "text_ta":"கடந்த மாதத்தில் எவ்வளவு நேரம் நிதானமாகவும் பதற்றமில்லாமலும் உணர்ந்தீர்கள்?",
       "sub_category": "GPA",
       "options": "time6",
       "reverse": false
@@ -164,6 +170,7 @@
     {
       "number": 7,
       "text": "During the past month, how much of the time have you generally enjoyed the things you do?",
+      "text_ta":"கடந்த மாதத்தில் நீங்கள் செய்யும் விஷயங்களை எவ்வளவு நேரம் பொதுவாக ரசித்தீர்கள்?",
       "sub_category": "GPA",
       "options": "time6",
       "reverse": false
@@ -171,6 +178,7 @@
     {
       "number": 8,
       "text": "During the past month, have you had any reason to wonder if you were losing your mind, or losing control over the way you act, talk, think, feel, or of your memory?",
+      "text_ta":"கடந்த மாதத்தில் உங்கள் மனதை அல்லது நடத்தை, பேச்சு, சிந்தனை, உணர்வு அல்லது நினைவாற்றலை இழக்கிறீர்களா என்று யோசிக்கும் காரணம் ஏதாவது இருந்ததா?",
       "sub_category": "LBEC",
       "options": [
         {
@@ -202,6 +210,7 @@
     {
       "number": 9,
       "text": "Did you feel depressed during the past month?",
+      "text_ta":"கடந்த மாதத்தில் மனச்சோர்வாக உணர்ந்தீர்களா?",
       "sub_category": "DEP",
       "options": [
         {
@@ -230,6 +239,7 @@
     {
       "number": 10,
       "text": "During the past month, how much of the time have you felt loved and wanted?",
+      "text_ta":"கடந்த மாதத்தில் எவ்வளவு நேரம் நேசிக்கப்பட்டு, விரும்பப்பட்டதாக உணர்ந்தீர்கள்?",
       "sub_category": "ET",
       "options": "time6",
       "reverse": false
@@ -237,6 +247,7 @@
     {
       "number": 11,
       "text": "How much of the time, during the past month, have you been a very nervous person?",
+      "text_ta":"கடந்த மாதத்தில் எவ்வளவு நேரம் மிகவும் பதட்டமான நபராக இருந்தீர்கள்?",
       "sub_category": "ANX",
       "options": "time6",
       "reverse": false
@@ -244,6 +255,7 @@
     {
       "number": 12,
       "text": "When you have got up in the morning, this past month, about how often did you expect to have an interesting day?",
+      "text_ta":"கடந்த மாதத்தில் காலையில் எழுந்ததும் சுவாரஸ்யமான நாளாக இருக்கும் என்று எவ்வளவு அடிக்கடி எதிர்பார்த்தீர்கள்?",
       "sub_category": "GPA",
       "options": "freq6",
       "reverse": false
@@ -251,6 +263,7 @@
     {
       "number": 13,
       "text": "During the past month, how much of the time have you felt tense or “high-strung”?",
+      "text_ta":"கடந்த மாதத்தில் எவ்வளவு நேரம் பதற்றமாக அல்லது 'மிக இறுக்கமாக' உணர்ந்தீர்கள்?",
       "sub_category": "ANX",
       "options": "time6",
       "reverse": false
@@ -258,6 +271,7 @@
     {
       "number": 14,
       "text": "During the past month, have you been in firm control of your behaviour, thoughts, emotions or feelings?",
+      "text_ta":"கடந்த மாதத்தில் உங்கள் நடத்தை, சிந்தனை, உணர்வுகளை உறுதியாக கட்டுப்படுத்தியிருக்கிறீர்களா?",
       "sub_category": "LBEC",
       "options": [
         {
@@ -289,6 +303,7 @@
     {
       "number": 15,
       "text": "During the past month, how often did your hands shake when you tried to do something?",
+      "text_ta":"கடந்த மாதத்தில் ஏதாவது செய்ய முயற்சிக்கும்போது எவ்வளவு அடிக்கடி உங்கள் கைகள் நடுங்கின?",
       "sub_category": "ANX",
       "options": "freq6",
       "reverse": false
@@ -296,6 +311,7 @@
     {
       "number": 16,
       "text": "During the past month, how often did you feel that you had nothing to look forward to?",
+      "text_ta":"கடந்த மாதத்தில் எதிர்பார்ப்பதற்கு ஒன்றுமில்லை என்று எவ்வளவு அடிக்கடி உணர்ந்தீர்கள்?",
       "sub_category": "LBEC",
       "options": "freq6",
       "reverse": false
@@ -303,6 +319,7 @@
     {
       "number": 17,
       "text": "How much of the time, during the past month, have you felt calm and peaceful?",
+      "text_ta":"கடந்த மாதத்தில் எவ்வளவு நேரம் அமைதியாகவும் சாந்தமாகவும் உணர்ந்தீர்கள்?",
       "sub_category": "GPA",
       "options": "time6",
       "reverse": false
@@ -310,12 +327,14 @@
     {
       "number": 18,
       "text": "How much of the time, during the past month, have you felt emotionally stable?",
+      "text_ta":"கடந்த மாதத்தில் எவ்வளவு நேரம் உணர்வுபூர்வமாக நிலையாக உணர்ந்தீர்கள்?",
       "sub_category": "LBEC",
       "options": "time6"
     },
     {
       "number": 19,
       "text": "How much of the time, during the past month, have you felt downhearted and blue?",
+      "text_ta":"கடந்த மாதத்தில் எவ்வளவு நேரம் மனச்சோர்வாகவும் வருத்தமாகவும் உணர்ந்தீர்கள்?",
       "sub_category": "DEP",
       "options": "time6",
       "reverse": false
@@ -323,6 +342,7 @@
     {
       "number": 20,
       "text": "How often have you felt like crying, during the past month?",
+      "text_ta":"கடந்த மாதத்தில் எவ்வளவு அடிக்கடி அழ வேண்டும் போல் உணர்ந்தீர்கள்?",
       "sub_category": "LBEC",
       "options": "freq6",
       "reverse": false
@@ -330,6 +350,7 @@
     {
       "number": 21,
       "text": "During the past month, how often have you felt that others would be better off if you were dead?",
+      "text_ta":"கடந்த மாதத்தில் நீங்கள் இறந்துவிட்டால் மற்றவர்கள் நன்றாக இருப்பார்கள் என்று எவ்வளவு அடிக்கடி உணர்ந்தீர்கள்?",
       "sub_category": "LBEC",
       "options": "freq6",
       "reverse": false,
@@ -343,12 +364,14 @@
     {
       "number": 22,
       "text": "How much of the time, during the past month, were you able to relax without difficulty?",
+      "text_ta":"கடந்த மாதத்தில் எவ்வளவு நேரம் சிரமமின்றி ஓய்வெடுக்க முடிந்தது?",
       "sub_category": null,
       "options": "time6"
     },
     {
       "number": 23,
       "text": "How much of the time, during the past month, did you feel that your love relationships, loving and being loved, were full and complete?",
+      "text_ta":"கடந்த மாதத்தில் உங்கள் காதல் உறவுகள், நேசிப்பது மற்றும் நேசிக்கப்படுவது முழுமையாக இருந்ததாக எவ்வளவு நேரம் உணர்ந்தீர்கள்?",
       "sub_category": "ET",
       "options": "time6",
       "reverse": false
@@ -356,6 +379,7 @@
     {
       "number": 24,
       "text": "How often, during the past month, did you feel that nothing turned out for you the way you wanted it to?",
+      "text_ta":"கடந்த மாதத்தில் நீங்கள் விரும்பியபடி எதுவும் நடக்கவில்லை என்று எவ்வளவு அடிக்கடி உணர்ந்தீர்கள்?",
       "sub_category": "LBEC",
       "options": "freq6",
       "reverse": false
@@ -363,6 +387,7 @@
     {
       "number": 25,
       "text": "How much have you been bothered by nervousness, or your “nerves”, during the past month?",
+      "text_ta":"கடந்த மாதத்தில் பதற்றம் அல்லது 'நரம்புகள்' எவ்வளவு உங்களை தொந்தரவு செய்தது?",
       "sub_category": "ANX",
       "options": [
         {
@@ -395,6 +420,7 @@
     {
       "number": 26,
       "text": "During the past month, how much of the time has living been a wonderful adventure for you?",
+      "text_ta":"கடந்த மாதத்தில் வாழ்க்கை உங்களுக்கு எவ்வளவு நேரம் அற்புதமான சாகசமாக இருந்தது?",
       "sub_category": "GPA",
       "options": "time6",
       "reverse": false
@@ -402,6 +428,7 @@
     {
       "number": 27,
       "text": "How often, during the past month, have you felt so down in the dumps that nothing could cheer you up?",
+      "text_ta":"கடந்த மாதத்தில் எதுவும் உங்களை மகிழ்விக்க முடியாத அளவுக்கு எவ்வளவு அடிக்கடி மனச்சோர்வடைந்தீர்கள்?",
       "sub_category": "LBEC",
       "options": "freq6",
       "reverse": false
@@ -409,6 +436,7 @@
     {
       "number": 28,
       "text": "During the past month, did you think about taking your own life?",
+      "text_ta":"கடந்த மாதத்தில் உங்கள் சொந்த வாழ்க்கையை முடித்துக்கொள்ள நினைத்தீர்களா?",
       "sub_category": "LBEC",
       "options": [
         {
@@ -443,6 +471,7 @@
     {
       "number": 29,
       "text": "During the past month, how much of the time have you felt restless, fidgety, or impatient?",
+      "text_ta":"கடந்த மாதத்தில் எவ்வளவு நேரம் அமைதியில்லாமல், பதற்றமாக அல்லது பொறுமையில்லாமல் உணர்ந்தீர்கள்?",
       "sub_category": "ANX",
       "options": "time6",
       "reverse": false
@@ -450,6 +479,7 @@
     {
       "number": 30,
       "text": "During the past month, how much of the time have you been moody or brooded about things?",
+      "text_ta":"கடந்த மாதத்தில் எவ்வளவு நேரம் மனநிலை மாறி அல்லது விஷயங்களைப் பற்றி யோசித்தீர்கள்?",
       "sub_category": "DEP",
       "options": "time6",
       "reverse": false
@@ -457,6 +487,7 @@
     {
       "number": 31,
       "text": "How much of the time, during the past month, have you felt cheerful, lighthearted?",
+      "text_ta":"கடந்த மாதத்தில் எவ்வளவு நேரம் மகிழ்ச்சியாகவும் இலகுவாகவும் உணர்ந்தீர்கள்?",
       "sub_category": "GPA",
       "options": "time6",
       "reverse": false
@@ -464,6 +495,7 @@
     {
       "number": 32,
       "text": "During the past month, how often did you get rattled, upset or flustered?",
+      "text_ta":"கடந்த மாதத்தில் எவ்வளவு அடிக்கடி குழப்பமடைந்து, வருத்தமடைந்து அல்லது பதட்டமடைந்தீர்கள்?",
       "sub_category": "ANX",
       "options": "freq6",
       "reverse": false
@@ -471,6 +503,7 @@
     {
       "number": 33,
       "text": "During the past month, have you been anxious or worried?",
+      "text_ta":"கடந்த மாதத்தில் நீங்கள் பதட்டமாகவோ கவலையாகவோ இருந்தீர்களா?",
       "sub_category": "ANX",
       "options": [
         {
@@ -503,6 +536,7 @@
     {
       "number": 34,
       "text": "During the past month, how much of the time were you a happy person?",
+      "text_ta":"கடந்த மாதத்தில் எவ்வளவு நேரம் நீங்கள் மகிழ்ச்சியான நபராக இருந்தீர்கள்?",
       "sub_category": "GPA",
       "options": "time6",
       "reverse": false
@@ -510,6 +544,7 @@
     {
       "number": 35,
       "text": "How often during the past month did you find yourself trying to calm down?",
+      "text_ta":"கடந்த மாதத்தில் எவ்வளவு அடிக்கடி நீங்கள் அமைதியடைய முயற்சிப்பதை கண்டீர்கள்?",
       "sub_category": "ANX",
       "options": "freq6",
       "reverse": false
@@ -517,6 +552,7 @@
     {
       "number": 36,
       "text": "During the past month, how much of the time have you been in low or very low spirits?",
+      "text_ta":"கடந்த மாதத்தில் எவ்வளவு நேரம் தாழ்ந்த அல்லது மிகத் தாழ்ந்த மனநிலையில் இருந்தீர்கள்?",
       "sub_category": "DEP",
       "options": "time6",
       "reverse": false
@@ -524,6 +560,7 @@
     {
       "number": 37,
       "text": "How often, during the past month, have you been waking up feeling fresh and rested?",
+      "text_ta":"கடந்த மாதத்தில் எவ்வளவு அடிக்கடி புத்துணர்ச்சியாகவும் ஓய்வெடுத்ததாகவும் எழுந்தீர்கள்?",
       "sub_category": "GPA",
       "options": [
         {
@@ -556,6 +593,7 @@
     {
       "number": 38,
       "text": "During the past month, have you been under or felt you were under any strain, stress or pressure?",
+      "text_ta":"கடந்த மாதத்தில் நீங்கள் எந்த அழுத்தம், மன அழுத்தம் அல்லது அழுத்தத்தின் கீழ் இருந்தீர்களா?",
       "sub_category": null,
       "options": [
         {

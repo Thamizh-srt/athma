@@ -7,7 +7,6 @@ const Ctx = createContext(null);
 export function AdminAuthProvider({ children }) {
   const [admin, setAdmin] = useState(() => adminTokenStorage.getUser());
 
-  // Expected Laravel response: { token, admin: { name, email } }
   const login = useCallback(async (credentials) => {
     const data = await adminApi.login(credentials);
     adminTokenStorage.save(data.token, data.admin);
